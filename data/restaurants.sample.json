@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "name": "홍대분식",
+    "category": "한식",
+    "averagePrice": 8000,
+    "purposes": ["혼밥", "친구"],
+    "features": ["저렴함", "빠른 식사", "혼밥 가능"],
+    "rating": 4.2,
+    "area": "서교동"
+  },
+  {
+    "id": 2,
+    "name": "파스타룸",
+    "category": "양식",
+    "averagePrice": 15000,
+    "purposes": ["데이트", "친구"],
+    "features": ["분위기 좋음", "데이트 적합"],
+    "rating": 4.5,
+    "area": "연남동"
+  },
+  {
+    "id": 3,
+    "name": "직장인국밥",
+    "category": "한식",
+    "averagePrice": 9000,
+    "purposes": ["혼밥", "점심"],
+    "features": ["든든함", "빠른 회전율", "혼밥 가능"],
+    "rating": 4.1,
+    "area": "공덕동"
+  },
+  {
+    "id": 4,
+    "name": "스시라이트",
+    "category": "일식",
+    "averagePrice": 13000,
+    "purposes": ["친구", "데이트"],
+    "features": ["깔끔함", "가벼운 식사"],
+    "rating": 4.3,
+    "area": "합정동"
+  },
+  {
+    "id": 5,
+    "name": "카레하우스",
+    "category": "일식",
+    "averagePrice": 10000,
+    "purposes": ["혼밥", "친구"],
+    "features": ["가성비", "혼밥 가능"],
+    "rating": 4.0,
+    "area": "상수동"
+  },
+  {
+    "id": 6,
+    "name": "마포갈비",
+    "category": "한식",
+    "averagePrice": 25000,
+    "purposes": ["회식", "모임"],
+    "features": ["넓은 공간", "단체석", "숯불구이"],
+    "rating": 4.4,
+    "area": "용강동"
+  },
+  {
+    "id": 7,
+    "name": "망원우동",
+    "category": "분식",
+    "averagePrice": 7000,
+    "purposes": ["혼밥", "야식"],
+    "features": ["가성비", "얼큰함", "빠른 식사"],
+    "rating": 4.6,
+    "area": "망원동"
+  },
+  {
+    "id": 8,
+    "name": "상암쌀국수",
+    "category": "아시안",
+    "averagePrice": 11000,
+    "purposes": ["점심", "혼밥"],
+    "features": ["직장인 맛집", "빠른 회전율", "해장"],
+    "rating": 4.2,
+    "area": "상암동"
+  },
+  {
+    "id": 9,
+    "name": "연남스테이크하우스",
+    "category": "양식",
+    "averagePrice": 35000,
+    "purposes": ["데이트", "기념일"],
+    "features": ["분위기 맛집", "예약 필수", "고급스러움"],
+    "rating": 4.7,
+    "area": "연남동"
+  },
+  {
+    "id": 10,
+    "name": "합정라멘",
+    "category": "일식",
+    "averagePrice": 10000,
+    "purposes": ["혼밥", "친구"],
+    "features": ["진한 육수", "혼밥 테이블", "웨이팅"],
+    "rating": 4.5,
+    "area": "합정동"
+  },
+  {
+    "id": 11,
+    "name": "서교동백반",
+    "category": "한식",
+    "averagePrice": 8000,
+    "purposes": ["혼밥", "점심"],
+    "features": ["집밥 느낌", "가성비", "매일 바뀌는 반찬"],
+    "rating": 4.1,
+    "area": "서교동"
+  },
+  {
+    "id": 12,
+    "name": "공덕족발",
+    "category": "한식",
+    "averagePrice": 30000,
+    "purposes": ["회식", "친구"],
+    "features": ["양이 많음", "술자리 적합", "시끌벅적함"],
+    "rating": 4.3,
+    "area": "공덕동"
+  },
+  {
+    "id": 13,
+    "name": "상수타코",
+    "category": "기타",
+    "averagePrice": 14000,
+    "purposes": ["친구", "데이트"],
+    "features": ["힙한 분위기", "맥주와 어울림", "이국적"],
+    "rating": 4.4,
+    "area": "상수동"
+  },
+  {
+    "id": 14,
+    "name": "도화불짬뽕",
+    "category": "중식",
+    "averagePrice": 9000,
+    "purposes": ["점심", "혼밥"],
+    "features": ["불맛", "빠른 식사", "매운맛"],
+    "rating": 4.0,
+    "area": "도화동"
+  },
+  {
+    "id": 15,
+    "name": "망원티라미수",
+    "category": "카페",
+    "averagePrice": 7000,
+    "purposes": ["친구", "데이트"],
+    "features": ["사진 찍기 좋음", "달콤함", "아담한 공간"],
+    "rating": 4.3,
+    "area": "망원동"
+  },
+  {
+    "id": 16,
+    "name": "대흥부대찌개",
+    "category": "한식",
+    "averagePrice": 10000,
+    "purposes": ["친구", "점심"],
+    "features": ["푸짐함", "라면사리 무한", "든든함"],
+    "rating": 4.2,
+    "area": "대흥동"
+  },
+  {
+    "id": 17,
+    "name": "상암수제버거",
+    "category": "양식",
+    "averagePrice": 12000,
+    "purposes": ["혼밥", "점심"],
+    "features": ["수제 패티", "혼밥 가능", "캐주얼함"],
+    "rating": 4.5,
+    "area": "상암동"
+  },
+  {
+    "id": 18,
+    "name": "연남마라탕",
+    "category": "중식",
+    "averagePrice": 13000,
+    "purposes": ["친구", "혼밥"],
+    "features": ["매운맛 조절", "원하는 재료 선택", "트렌디함"],
+    "rating": 4.4,
+    "area": "연남동"
+  },
+  {
+    "id": 19,
+    "name": "서교화덕피자",
+    "category": "양식",
+    "averagePrice": 22000,
+    "purposes": ["친구", "모임"],
+    "features": ["화덕피자", "맥주 안주", "아늑함"],
+    "rating": 4.6,
+    "area": "서교동"
+  },
+  {
+    "id": 20,
+    "name": "합정이자카야",
+    "category": "일식",
+    "averagePrice": 25000,
+    "purposes": ["데이트", "모임"],
+    "features": ["프라이빗룸", "신선한 사시미", "조용한 분위기"],
+    "rating": 4.5,
+    "area": "합정동"
+  },
+  {
+    "id": 21,
+    "name": "공덕그린샐러드",
+    "category": "기타",
+    "averagePrice": 11000,
+    "purposes": ["혼밥", "다이어트"],
+    "features": ["건강함", "신선한 재료", "가벼운 식사"],
+    "rating": 4.3,
+    "area": "공덕동"
+  },
+  {
+    "id": 22,
+    "name": "상수카츠",
+    "category": "일식",
+    "averagePrice": 14000,
+    "purposes": ["데이트", "친구"],
+    "features": ["겉바속촉", "웨이팅 있음", "육즙"],
+    "rating": 4.6,
+    "area": "상수동"
+  },
+  {
+    "id": 23,
+    "name": "망원연어덮밥",
+    "category": "일식",
+    "averagePrice": 12000,
+    "purposes": ["혼밥", "친구"],
+    "features": ["깔끔함", "가성비", "정갈한 한끼"],
+    "rating": 4.2,
+    "area": "망원동"
+  },
+  {
+    "id": 24,
+    "name": "도화동고기집",
+    "category": "한식",
+    "averagePrice": 18000,
+    "purposes": ["회식", "가족"],
+    "features": ["직접 구워줌", "친절함", "품질 좋은 고기"],
+    "rating": 4.4,
+    "area": "도화동"
+  },
+  {
+    "id": 25,
+    "name": "상암초밥",
+    "category": "일식",
+    "averagePrice": 15000,
+    "purposes": ["점심", "혼밥"],
+    "features": ["직장인 점심", "신선함", "가성비 런치세트"],
+    "rating": 4.1,
+    "area": "상암동"
+  },
+  {
+    "id": 26,
+    "name": "연남동타이",
+    "category": "아시안",
+    "averagePrice": 13000,
+    "purposes": ["친구", "데이트"],
+    "features": ["현지맛", "이국적 분위기", "향신료"],
+    "rating": 4.5,
+    "area": "연남동"
+  },
+  {
+    "id": 27,
+    "name": "합정브런치",
+    "category": "양식",
+    "averagePrice": 16000,
+    "purposes": ["데이트", "친구"],
+    "features": ["예쁜 플레이팅", "여유로운 분위기", "브런치"],
+    "rating": 4.4,
+    "area": "합정동"
+  },
+  {
+    "id": 28,
+    "name": "서교우동",
+    "category": "일식",
+    "averagePrice": 8000,
+    "purposes": ["혼밥", "점심"],
+    "features": ["쫄깃한 면발", "혼밥석", "혼자 오기 좋음"],
+    "rating": 4.1,
+    "area": "서교동"
+  },
+  {
+    "id": 29,
+    "name": "대흥닭갈비",
+    "category": "한식",
+    "averagePrice": 13000,
+    "purposes": ["친구", "모임"],
+    "features": ["볶음밥 필수", "철판구이", "술안주"],
+    "rating": 4.2,
+    "area": "대흥동"
+  },
+  {
+    "id": 30,
+    "name": "공덕샌드위치",
+    "category": "양식",
+    "averagePrice": 7500,
+    "purposes": ["혼밥", "아침"],
+    "features": ["테이크아웃", "간편함", "커피와 세트"],
+    "rating": 4.0,
+    "area": "공덕동"
+  },
+  {
+    "id": 31,
+    "name": "라 쁘띠 메종",
+    "category": "프랑스",
+    "averagePrice": 45000,
+    "purposes": ["데이트", "기념일"],
+    "features": ["코스 요리", "고급스러움", "예약 필수", "와인 페어링"],
+    "rating": 4.8,
+    "area": "연남동"
+  },
+  {
+    "id": 32,
+    "name": "포 굿",
+    "category": "베트남",
+    "averagePrice": 10500,
+    "purposes": ["점심", "혼밥"],
+    "features": ["깊은 국물", "해장", "고수 선택 가능"],
+    "rating": 4.3,
+    "area": "망원동"
+  },
+  {
+    "id": 33,
+    "name": "방콕익스프레스",
+    "category": "태국",
+    "averagePrice": 12000,
+    "purposes": ["친구", "데이트"],
+    "features": ["이국적", "팟타이 맛집", "캐주얼함"],
+    "rating": 4.4,
+    "area": "서교동"
+  },
+  {
+    "id": 34,
+    "name": "춘천철판",
+    "category": "한식",
+    "averagePrice": 14000,
+    "purposes": ["친구", "모임"],
+    "features": ["닭갈비", "마무리 볶음밥", "시끌벅적함"],
+    "rating": 4.2,
+    "area": "합정동"
+  },
+  {
+    "id": 35,
+    "name": "스윗스쿱",
+    "category": "디저트",
+    "averagePrice": 5500,
+    "purposes": ["데이트", "간식"],
+    "features": ["수제 아이스크림", "다양한 맛", "사진 찍기 좋음"],
+    "rating": 4.6,
+    "area": "상수동"
+  },
+  {
+    "id": 36,
+    "name": "홍라탕",
+    "category": "중식",
+    "averagePrice": 12000,
+    "purposes": ["혼밥", "친구"],
+    "features": ["마라탕", "맵기 조절", "재료 다양함"],
+    "rating": 4.3,
+    "area": "공덕동"
+  },
+  {
+    "id": 37,
+    "name": "아미고스",
+    "category": "멕시칸",
+    "averagePrice": 15000,
+    "purposes": ["친구", "데이트"],
+    "features": ["타코", "맥주 안주", "힙한 분위기"],
+    "rating": 4.5,
+    "area": "상암동"
+  },
+  {
+    "id": 38,
+    "name": "초록식탁",
+    "category": "비건",
+    "averagePrice": 13000,
+    "purposes": ["다이어트", "혼밥"],
+    "features": ["건강식", "비건 옵션", "깔끔한 인테리어"],
+    "rating": 4.2,
+    "area": "연남동"
+  },
+  {
+    "id": 39,
+    "name": "오븐오븐",
+    "category": "디저트",
+    "averagePrice": 8000,
+    "purposes": ["간식", "친구"],
+    "features": ["베이커리", "소금빵 맛집", "테이크아웃 추천"],
+    "rating": 4.7,
+    "area": "망원동"
+  },
+  {
+    "id": 40,
+    "name": "만두공방",
+    "category": "중식",
+    "averagePrice": 9000,
+    "purposes": ["혼밥", "점심"],
+    "features": ["수제 딤섬", "가성비", "가벼운 식사"],
+    "rating": 4.1,
+    "area": "도화동"
+  },
+  {
+    "id": 41,
+    "name": "그릴마스터",
+    "category": "양식",
+    "averagePrice": 38000,
+    "purposes": ["데이트", "기념일"],
+    "features": ["스테이크 전문", "어두운 조명", "와인 리스트"],
+    "rating": 4.6,
+    "area": "합정동"
+  },
+  {
+    "id": 42,
+    "name": "바다마을",
+    "category": "일식",
+    "averagePrice": 22000,
+    "purposes": ["모임", "회식"],
+    "features": ["신선한 초밥", "룸 완비", "깔끔함"],
+    "rating": 4.4,
+    "area": "상암동"
+  },
+  {
+    "id": 43,
+    "name": "밀밭",
+    "category": "양식",
+    "averagePrice": 16000,
+    "purposes": ["친구", "데이트"],
+    "features": ["생면 파스타", "아늑함", "데이트 적합"],
+    "rating": 4.5,
+    "area": "공덕동"
+  },
+  {
+    "id": 44,
+    "name": "할매가마솥",
+    "category": "한식",
+    "averagePrice": 9000,
+    "purposes": ["혼밥", "아침"],
+    "features": ["순대국", "24시간", "푸짐한 양"],
+    "rating": 4.0,
+    "area": "대흥동"
+  },
+  {
+    "id": 45,
+    "name": "펄인더컵",
+    "category": "디저트",
+    "averagePrice": 5500,
+    "purposes": ["간식", "테이크아웃"],
+    "features": ["버블티", "당도 조절", "대용량"],
+    "rating": 4.2,
+    "area": "서교동"
+  },
+  {
+    "id": 46,
+    "name": "치즈바이트",
+    "category": "양식",
+    "averagePrice": 20000,
+    "purposes": ["친구", "모임"],
+    "features": ["미국식 피자", "조각 피자 판매", "맥주 환상궁합"],
+    "rating": 4.5,
+    "area": "상수동"
+  },
+  {
+    "id": 47,
+    "name": "스파이스루트",
+    "category": "인도",
+    "averagePrice": 14000,
+    "purposes": ["친구", "데이트"],
+    "features": ["정통 커리", "난 무한리필", "향신료 가득"],
+    "rating": 4.3,
+    "area": "연남동"
+  },
+  {
+    "id": 48,
+    "name": "육즙가득",
+    "category": "한식",
+    "averagePrice": 17000,
+    "purposes": ["회식", "가족"],
+    "features": ["숙성 삼겹살", "직원 그릴링", "웨이팅 있음"],
+    "rating": 4.7,
+    "area": "망원동"
+  },
+  {
+    "id": 49,
+    "name": "하노이별",
+    "category": "베트남",
+    "averagePrice": 9500,
+    "purposes": ["혼밥", "점심"],
+    "features": ["가성비", "빠른 서빙", "혼밥 바테이블"],
+    "rating": 4.1,
+    "area": "용강동"
+  },
+  {
+    "id": 50,
+    "name": "슈가크래프트",
+    "category": "디저트",
+    "averagePrice": 7500,
+    "purposes": ["선물", "간식"],
+    "features": ["마카롱", "뚱카롱", "예쁜 패키지"],
+    "rating": 4.6,
+    "area": "합정동"
+  },
+  {
+    "id": 51,
+    "name": "바삭카츠",
+    "category": "일식",
+    "averagePrice": 12500,
+    "purposes": ["점심", "혼밥"],
+    "features": ["돈카츠", "두툼한 고기", "소금에 찍어먹음"],
+    "rating": 4.4,
+    "area": "성산동"
+  },
+  {
+    "id": 52,
+    "name": "발리문",
+    "category": "인도네시아",
+    "averagePrice": 13000,
+    "purposes": ["데이트", "친구"],
+    "features": ["나시고랭", "라탄 인테리어", "이색 데이트"],
+    "rating": 4.5,
+    "area": "공덕동"
+  },
+  {
+    "id": 53,
+    "name": "젤라떼리아",
+    "category": "디저트",
+    "averagePrice": 6000,
+    "purposes": ["데이트", "간식"],
+    "features": ["정통 젤라또", "쫀득함", "시즌 메뉴"],
+    "rating": 4.5,
+    "area": "연남동"
+  },
+  {
+    "id": 54,
+    "name": "달빛술상",
+    "category": "일식",
+    "averagePrice": 28000,
+    "purposes": ["모임", "데이트"],
+    "features": ["이자카야", "사시미 모리아와세", "프라이빗함"],
+    "rating": 4.6,
+    "area": "서교동"
+  },
+  {
+    "id": 55,
+    "name": "패티앤번",
+    "category": "양식",
+    "averagePrice": 11000,
+    "purposes": ["혼밥", "친구"],
+    "features": ["수제버거", "육즙 가득 패티", "감자튀김 맛집"],
+    "rating": 4.3,
+    "area": "망원동"
+  },
+  {
+    "id": 56,
+    "name": "빨간지붕",
+    "category": "분식",
+    "averagePrice": 6500,
+    "purposes": ["혼밥", "간식"],
+    "features": ["옛날 떡볶이", "학교 앞 맛", "튀김 범벅"],
+    "rating": 4.2,
+    "area": "도화동"
+  },
+  {
+    "id": 57,
+    "name": "불향반점",
+    "category": "중식",
+    "averagePrice": 9500,
+    "purposes": ["점심", "해장"],
+    "features": ["고기 짬뽕", "불맛", "공기밥 무료"],
+    "rating": 4.4,
+    "area": "상암동"
+  },
+  {
+    "id": 58,
+    "name": "크루아상랩",
+    "category": "디저트",
+    "averagePrice": 8500,
+    "purposes": ["간식", "혼자"],
+    "features": ["결이 살아있음", "프랑스 버터", "브런치 대용"],
+    "rating": 4.7,
+    "area": "공덕동"
+  },
+  {
+    "id": 59,
+    "name": "보울오브스프",
+    "category": "양식",
+    "averagePrice": 9500,
+    "purposes": ["다이어트", "혼밥"],
+    "features": ["따뜻한 스프", "건강함", "아침 식사"],
+    "rating": 4.3,
+    "area": "합정동"
+  },
+  {
+    "id": 60,
+    "name": "마라공방",
+    "category": "중식",
+    "averagePrice": 16000,
+    "purposes": ["친구", "모임"],
+    "features": ["마라샹궈", "얼얼함", "술안주 적합"],
+    "rating": 4.5,
+    "area": "대흥동"
+  },
+  {
+    "id": 61,
+    "name": "사와디캅",
+    "category": "태국",
+    "averagePrice": 11500,
+    "purposes": ["혼밥", "친구"],
+    "features": ["똠얌꿍", "로컬 분위기", "향신료 듬뿍"],
+    "rating": 4.3,
+    "area": "성산동"
+  },
+  {
+    "id": 62,
+    "name": "플러피",
+    "category": "디저트",
+    "averagePrice": 14000,
+    "purposes": ["데이트", "친구"],
+    "features": ["수플레 팬케이크", "몽글몽글함", "웨이팅 김"],
+    "rating": 4.6,
+    "area": "연남동"
+  },
+  {
+    "id": 63,
+    "name": "알로하포케",
+    "category": "기타",
+    "averagePrice": 12500,
+    "purposes": ["혼밥", "다이어트"],
+    "features": ["포케 샐러드", "신선한 연어", "커스텀 가능"],
+    "rating": 4.4,
+    "area": "상암동"
+  },
+  {
+    "id": 64,
+    "name": "훠궈야",
+    "category": "중식",
+    "averagePrice": 25000,
+    "purposes": ["모임", "친구"],
+    "features": ["무한리필", "백탕 홍탕", "셀프 소스바"],
+    "rating": 4.5,
+    "area": "서교동"
+  },
+  {
+    "id": 65,
+    "name": "크로플하우스",
+    "category": "디저트",
+    "averagePrice": 7500,
+    "purposes": ["간식", "친구"],
+    "features": ["크로플", "바닐라 아이스크림 추가", "당충전"],
+    "rating": 4.4,
+    "area": "망원동"
+  },
+  {
+    "id": 66,
+    "name": "바베큐피트",
+    "category": "양식",
+    "averagePrice": 32000,
+    "purposes": ["친구", "회식"],
+    "features": ["텍사스 바베큐", "플래터", "육즙 가득 폭립"],
+    "rating": 4.6,
+    "area": "상수동"
+  },
+  {
+    "id": 67,
+    "name": "오색찬란",
+    "category": "한식",
+    "averagePrice": 10000,
+    "purposes": ["혼밥", "건강식"],
+    "features": ["육회 비빔밥", "신선한 나물", "정갈한 한상"],
+    "rating": 4.2,
+    "area": "공덕동"
+  },
+  {
+    "id": 68,
+    "name": "타르트팩토리",
+    "category": "디저트",
+    "averagePrice": 8500,
+    "purposes": ["선물", "데이트"],
+    "features": ["과일 타르트", "바삭한 시지", "예쁜 비주얼"],
+    "rating": 4.5,
+    "area": "합정동"
+  },
+  {
+    "id": 69,
+    "name": "올라바르셀로나",
+    "category": "스페인",
+    "averagePrice": 24000,
+    "purposes": ["데이트", "기념일"],
+    "features": ["타파스", "감바스", "와인 마시기 좋음"],
+    "rating": 4.7,
+    "area": "연남동"
+  },
+  {
+    "id": 70,
+    "name": "눈꽃마을",
+    "category": "디저트",
+    "averagePrice": 12000,
+    "purposes": ["가족", "친구"],
+    "features": ["우유 빙수", "생과일 듬뿍", "여름 필수 코스"],
+    "rating": 4.3,
+    "area": "도화동"
+  }
+]
