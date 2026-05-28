@@ -53,6 +53,9 @@ flowchart LR
     UC02 --> UC04
 ```
 
+전체 구조 다이어그램
+![다이어그램](./images/diagram.jpg)
+
 ---
 
 ## 4. 기본 사용 흐름
@@ -72,14 +75,24 @@ flowchart LR
 식당 데이터는 다음과 같은 형식으로 관리한다.
 
 ```json
-{
-  "id": 1,
-  "name": "홍대김밥",
-  "category": "분식",
-  "menu": ["김밥", "라면", "떡볶이"],
-  "priceRange": "저렴",
-  "averagePrice": 7000,
-  "location": "홍대",
-  "description": "가볍게 한 끼 먹기 좋은 분식집"
-}
+ {
+    "id": 1,
+    "name": "홍대분식",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 …",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "할머니 손맛 떡볶이",
+        "price": 5000
+      },
+      {
+        "name": "수제 모둠 튀김 세트",
+        "price": 11000
+      }
+    ],
+    "priceRange": "5000-10000"
+  }
 ```
