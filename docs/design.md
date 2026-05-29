@@ -96,3 +96,5 @@ flowchart LR
     "priceRange": "5000-10000"
   }
 ```
+## 6. 와이어프레임
+![와이어프레임](./images/wireframe.png)
