@@ -7,7 +7,9 @@ function formatBudget(budget) {
 }
 
 function buildFilterSummary(filters) {
-  const summaryItems = [filters.category, formatBudget(filters.budget)].filter(Boolean)
+  const categories = filters.categories ?? []
+  const categorySummary = categories.length > 0 ? categories.join(', ') : ''
+  const summaryItems = [categorySummary, formatBudget(filters.budget)].filter(Boolean)
 
   if (summaryItems.length === 0) {
     return '전체 조건'

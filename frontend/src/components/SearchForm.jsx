@@ -7,14 +7,25 @@ const FOOD_CATEGORIES = [
   '패스트푸드',
   '카페',
   '아시안',
+  '디저트',
+  '치킨',
+  '피자',
+  '프랑스',
+  '베트남',
+  '태국',
+  '멕시칸',
+  '비건',
+  '인도',
+  '인도네시아',
+  '스페인',
   '기타',
 ]
 
 function SearchForm({
   budget,
-  category,
+  categories,
   onBudgetChange,
-  onCategoryChange,
+  onCategoryToggle,
   onSubmit,
   onReset,
 }) {
@@ -53,9 +64,10 @@ function SearchForm({
               key={foodCategory}
               type="button"
               className={`category-button${
-                category === foodCategory ? ' is-selected' : ''
+                categories.includes(foodCategory) ? ' is-selected' : ''
               }`}
-              onClick={() => onCategoryChange(foodCategory)}
+              aria-pressed={categories.includes(foodCategory)}
+              onClick={() => onCategoryToggle(foodCategory)}
             >
               {foodCategory}
             </button>

@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   const [budget, setBudget] = useState('')
-  const [category, setCategory] = useState('')
+  const [categories, setCategories] = useState([])
   const [submittedFilters, setSubmittedFilters] = useState(null)
   const [recommendations, setRecommendations] = useState([])
 
@@ -22,13 +22,21 @@ function App() {
   const handleSubmit = () => {
     runRecommendation({
       budget: budget === '' ? '' : Number(budget),
-      category,
+      categories,
     })
+  }
+
+  const handleCategoryToggle = (selectedCategory) => {
+    setCategories((currentCategories) =>
+      currentCategories.includes(selectedCategory)
+        ? currentCategories.filter((category) => category !== selectedCategory)
+        : [...currentCategories, selectedCategory],
+    )
   }
 
   const handleReset = () => {
     setBudget('')
-    setCategory('')
+    setCategories([])
     setSubmittedFilters(null)
     setRecommendations([])
   }
@@ -52,7 +60,7 @@ function App() {
   }
 
   const handleChangeCategory = () => {
-    setCategory('')
+    setCategories([])
     setSubmittedFilters(null)
     setRecommendations([])
   }
@@ -86,9 +94,9 @@ function App() {
             </section>
             <SearchForm
               budget={budget}
-              category={category}
+              categories={categories}
               onBudgetChange={setBudget}
-              onCategoryChange={setCategory}
+              onCategoryToggle={handleCategoryToggle}
               onSubmit={handleSubmit}
               onReset={handleReset}
             />

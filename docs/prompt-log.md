@@ -111,6 +111,8 @@ architecture.md 기준으로 Business Logic Layer를 구현하려고 합니다.
 6. 아직 결과 화면은 구현하지 말고, 추천 버튼 클릭 시 console.log로 filters 값이 제대로 찍히게 해 주세요.
 7. 기존 docs, data 파일은 수정하지 마세요.
 
+
+## Presentation Layer: 추천 결과 화면 구현
 와이어프레임의 Screen 2 추천 결과 화면을 구현해 주세요.
 
 구현 파일:
@@ -140,6 +142,7 @@ architecture.md 기준으로 Business Logic Layer를 구현하려고 합니다.
    대신 이미지 영역이 필요하면 회색 placeholder만 표시해 주세요.
 7. 추천 로직은 services 폴더의 함수를 사용하고, App.jsx에 직접 필터링 조건문을 넣지 마세요.
 
+## Presentation Layer: 결과 없음 화면 구현
 와이어프레임의 Screen 3 결과 없음 화면을 구현해 주세요.
 
 구현 파일:
