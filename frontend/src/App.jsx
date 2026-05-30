@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import EmptyState from './components/EmptyState'
 import Header from './components/Header'
 import ResultList from './components/ResultList'
 import SearchForm from './components/SearchForm'
@@ -11,16 +12,18 @@ function App() {
   const [submittedFilters, setSubmittedFilters] = useState(null)
   const [recommendations, setRecommendations] = useState([])
 
-  const handleSubmit = () => {
-    const filters = {
-      budget: budget === '' ? '' : Number(budget),
-      category,
-    }
-
+  const runRecommendation = (filters) => {
     const recommendedRestaurants = recommendRestaurants(filters)
 
     setSubmittedFilters(filters)
     setRecommendations(recommendedRestaurants)
+  }
+
+  const handleSubmit = () => {
+    runRecommendation({
+      budget: budget === '' ? '' : Number(budget),
+      category,
+    })
   }
 
   const handleReset = () => {
@@ -35,17 +38,44 @@ function App() {
     setRecommendations([])
   }
 
+  const handleIncreaseBudget = () => {
+    const currentBudget =
+      submittedFilters.budget === '' ? 0 : Number(submittedFilters.budget)
+    const increasedBudget = currentBudget + 5000
+    const filters = {
+      ...submittedFilters,
+      budget: increasedBudget,
+    }
+
+    setBudget(String(increasedBudget))
+    runRecommendation(filters)
+  }
+
+  const handleChangeCategory = () => {
+    setCategory('')
+    setSubmittedFilters(null)
+    setRecommendations([])
+  }
+
+  const hasSubmittedFilters = submittedFilters !== null
   const hasRecommendations = recommendations.length > 0
 
   return (
     <div className="app">
       <Header />
       <main className="app-main">
-        {hasRecommendations ? (
+        {hasSubmittedFilters && hasRecommendations ? (
           <ResultList
             filters={submittedFilters}
             restaurants={recommendations}
             onEditFilters={handleEditFilters}
+          />
+        ) : hasSubmittedFilters ? (
+          <EmptyState
+            filters={submittedFilters}
+            onIncreaseBudget={handleIncreaseBudget}
+            onChangeCategory={handleChangeCategory}
+            onResetFilters={handleEditFilters}
           />
         ) : (
           <>
