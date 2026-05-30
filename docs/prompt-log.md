@@ -1,0 +1,89 @@
+## React Vite 프로젝트 생성
+현재 repository는 restaurant-recommender이고, 루트에는 docs, data, README.md가 이미 있습니다.
+
+Day 3 구현을 시작하려고 합니다.
+
+요구사항:
+1. 기존 docs, data, README.md 파일은 절대 삭제하거나 덮어쓰지 마세요.
+2. React + Vite 프로젝트는 frontend 폴더 안에 구성한다고 가정하고 작업해 주세요.
+3. frontend/src 안의 기본 예제 코드를 정리해 주세요.
+4. 이후 MVP 구현을 위해 아래 폴더 구조를 만들어 주세요.
+
+frontend/src/
+- components/
+- data/
+- repositories/
+- services/
+
+아직 복잡한 기능 구현은 하지 말고, 프로젝트 구조 정리와 기본 실행 가능한 상태까지만 만들어 주세요.
+변경한 파일과 이유를 마지막에 요약해 주세요.
+
+## 데이터 파일 연결
+현재 루트 data/restaurants.sample.json 파일에 식당 샘플 데이터가 있습니다.
+
+요구사항:
+1. data/restaurants.sample.json의 데이터를 frontend/src/data/restaurants.json으로 복사해서 사용해 주세요.
+2. 원본 data/restaurants.sample.json은 삭제하지 마세요.
+3. 데이터 구조는 아래 필드를 기준으로 사용합니다.
+
+- id
+- name
+- district
+- dong
+- nearStation
+- address
+- category
+- menus: [{ name, price }]
+- priceRange
+
+4. 프론트엔드 코드에서는 frontend/src/data/restaurants.json을 import해서 사용할 수 있게 해 주세요.
+5. 아직 추천 로직은 구현하지 말고, 데이터 파일 복사와 사용 준비까지만 해 주세요.
+
+## Data Access Layer 구현
+architecture.md 기준으로 Data Access Layer를 구현하려고 합니다.
+
+요구사항:
+1. frontend/src/repositories/restaurantRepository.js 파일을 만들어 주세요.
+2. frontend/src/data/restaurants.json을 import해서 사용해 주세요.
+3. getRestaurants() 함수를 export해 주세요.
+4. getRestaurants()는 식당 데이터 배열을 반환해야 합니다.
+5. 추천 로직이나 화면 로직은 이 파일에 넣지 마세요.
+6. 싱글톤 패턴을 너무 복잡하게 클래스화하지 말고, 모듈 import 특성을 활용해 데이터가 한 번 로드되어 재사용되는 구조로 작성해 주세요.
+7. 유지보수하기 쉽게 주석을 짧게 달아 주세요.
+
+## Business Logic Layer 구현
+architecture.md 기준으로 Business Logic Layer를 구현하려고 합니다.
+
+현재 데이터 구조:
+- id
+- name
+- district
+- dong
+- nearStation
+- address
+- category
+- menus: [{ name, price }]
+- priceRange
+
+구현할 파일:
+1. frontend/src/services/filterStrategies.js
+2. frontend/src/services/recommendService.js
+
+요구사항:
+1. filterStrategies.js에는 조건별 필터 함수를 분리해 주세요.
+   - matchBudget(restaurant, budget)
+   - matchCategory(restaurant, category)
+2. budget은 숫자 입력값입니다.
+   - budget이 비어 있으면 true 처리
+   - budget이 있으면 restaurant.menus 중 price가 budget 이하인 메뉴가 하나라도 있을 때 true
+3. category가 비어 있으면 true 처리
+   - category가 있으면 restaurant.category와 정확히 일치할 때 true
+4. recommendService.js에는 recommendRestaurants(filters) 함수를 만들어 주세요.
+5. recommendRestaurants는 restaurantRepository의 getRestaurants()를 사용해야 합니다.
+6. 추천 결과에는 추천 이유(reasons)를 포함해 주세요.
+   예:
+   - "예산 안에 주문 가능한 메뉴가 있습니다."
+   - "선택한 음식 종류와 일치합니다."
+7. 식사 목적 purpose는 filters에 포함하되, 현재 데이터에 목적 필드가 없으므로 필터링에는 사용하지 말고 추천 조건 요약에만 사용할 수 있게 유지해 주세요.
+8. 화면 코드(App.jsx)에 필터링 조건문을 직접 넣지 마세요.
+9. 유지보수하기 쉽게 함수 단위로 작성해 주세요.
