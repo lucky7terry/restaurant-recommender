@@ -87,3 +87,26 @@ architecture.md 기준으로 Business Logic Layer를 구현하려고 합니다.
 7. 식사 목적 purpose는 filters에 포함하되, 현재 데이터에 목적 필드가 없으므로 필터링에는 사용하지 말고 추천 조건 요약에만 사용할 수 있게 유지해 주세요.
 8. 화면 코드(App.jsx)에 필터링 조건문을 직접 넣지 마세요.
 9. 유지보수하기 쉽게 함수 단위로 작성해 주세요.
+
+## Presentation Layer: 입력 화면 구현
+와이어프레임의 Screen 1 입력 화면을 구현해 주세요.
+
+구현 파일:
+- frontend/src/components/Header.jsx
+- frontend/src/components/SearchForm.jsx
+- frontend/src/App.jsx
+- frontend/src/App.css
+
+요구사항:
+1. Header에는 FoodPick 서비스명과 간단한 Home, About 메뉴를 표시해 주세요.
+2. SearchForm에는 아래 입력 요소를 만들어 주세요.
+   - 예산 입력 input
+   - 음식 카테고리 선택 버튼
+   - "식당 추천 받기 →" 버튼
+   - "조건 초기화" 버튼
+3. 음식 카테고리는 다음 값을 사용해 주세요.
+   - 한식, 중식, 일식, 양식, 분식, 패스트푸드, 카페, 아시안, 기타
+4. 선택된 버튼은 시각적으로 구분되게 해 주세요.
+5. 입력값 상태는 App.jsx에서 관리하고 SearchForm에 props로 전달해 주세요.
+6. 아직 결과 화면은 구현하지 말고, 추천 버튼 클릭 시 console.log로 filters 값이 제대로 찍히게 해 주세요.
+7. 기존 docs, data 파일은 수정하지 마세요.
