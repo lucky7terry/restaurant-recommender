@@ -110,3 +110,32 @@ architecture.md 기준으로 Business Logic Layer를 구현하려고 합니다.
 5. 입력값 상태는 App.jsx에서 관리하고 SearchForm에 props로 전달해 주세요.
 6. 아직 결과 화면은 구현하지 말고, 추천 버튼 클릭 시 console.log로 filters 값이 제대로 찍히게 해 주세요.
 7. 기존 docs, data 파일은 수정하지 마세요.
+
+와이어프레임의 Screen 2 추천 결과 화면을 구현해 주세요.
+
+구현 파일:
+- frontend/src/components/ResultList.jsx
+- frontend/src/components/RestaurantCard.jsx
+- frontend/src/App.jsx
+- frontend/src/App.css
+
+요구사항:
+1. App.jsx에서 추천 버튼을 누르면 recommendRestaurants(filters)를 호출해 주세요.
+2. 추천 결과가 1개 이상이면 ResultList 화면을 보여 주세요.
+3. ResultList 상단에는 다음을 표시해 주세요.
+   - "← 조건 수정" 버튼
+   - "추천 결과 (N곳)"
+   - 입력 조건 요약 예: "한식 · 15,000원 이하 · 혼밥"
+4. RestaurantCard에는 다음 정보를 표시해 주세요.
+   - 순위
+   - 식당 이름
+   - 카테고리
+   - priceRange
+   - district, dong
+   - nearStation
+   - menus 목록과 가격
+   - 추천 이유 reasons
+5. 조건 수정 버튼을 누르면 다시 입력 화면으로 돌아가게 해 주세요.
+6. 데이터에 이미지나 별점이 없으므로 이미지와 별점 기능은 구현하지 마세요.
+   대신 이미지 영역이 필요하면 회색 placeholder만 표시해 주세요.
+7. 추천 로직은 services 폴더의 함수를 사용하고, App.jsx에 직접 필터링 조건문을 넣지 마세요.
