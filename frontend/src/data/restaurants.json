@@ -1,0 +1,1402 @@
+[
+  {
+    "id": 1,
+    "name": "홍대분식",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "할머니 손맛 떡볶이",
+        "price": 5000
+      },
+      {
+        "name": "수제 모둠 튀김 세트",
+        "price": 11000
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 2,
+    "name": "파스타룸",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "트러플 베이컨 크림 파스타",
+        "price": 16000
+      },
+      {
+        "name": "토마토 해산물 리조또",
+        "price": 14000
+      }
+    ],
+    "priceRange": "15000-20000"
+  },
+  {
+    "id": 3,
+    "name": "직장인국밥",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "얼큰 돼지국밥",
+        "price": 9000
+      },
+      {
+        "name": "사골 순대국",
+        "price": 9000
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 4,
+    "name": "스시라이트",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "오늘의 런치 초밥 10p",
+        "price": 12000
+      },
+      {
+        "name": "생연어 롤스시",
+        "price": 14000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 5,
+    "name": "카레하우스",
+    "district": "마포구",
+    "dong": "상수동",
+    "nearStation": "상수",
+    "address": "서울특별시 마포구 상수동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "수제 등심 돈까스 카레",
+        "price": 10000
+      },
+      {
+        "name": "치킨 가라아게 카레",
+        "price": 9500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 6,
+    "name": "마포갈비",
+    "district": "마포구",
+    "dong": "용강동",
+    "nearStation": "마포",
+    "address": "서울특별시 마포구 용강동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "참숯 수제 돼지갈비 (250g)",
+        "price": 20000
+      },
+      {
+        "name": "숙성 생삼겹살 (180g)",
+        "price": 19000
+      }
+    ],
+    "priceRange": "25000-30000"
+  },
+  {
+    "id": 7,
+    "name": "망원우동",
+    "district": "마포구",
+    "dong": "망원동",
+    "nearStation": "망원",
+    "address": "서울특별시 마포구 망원동 ...",
+    "category": "분식",
+    "menus": [
+      {
+        "name": "얼큰 즉석 우동",
+        "price": 7000
+      },
+      {
+        "name": "꼬치 어묵 우동",
+        "price": 8000
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 8,
+    "name": "상암쌀국수",
+    "district": "마포구",
+    "dong": "상암동",
+    "nearStation": "디지털미디어시티",
+    "address": "서울특별시 마포구 상암동 ...",
+    "category": "아시안",
+    "menus": [
+      {
+        "name": "양지 차돌 쌀국수",
+        "price": 11000
+      },
+      {
+        "name": "해산물 팟타이",
+        "price": 12000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 9,
+    "name": "연남스테이크하우스",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "프리미엄 안심 스테이크",
+        "price": 42000
+      },
+      {
+        "name": "블랙 앵거스 립아이",
+        "price": 38000
+      }
+    ],
+    "priceRange": "35000-40000"
+  },
+  {
+    "id": 10,
+    "name": "합정라멘",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "진한 돈코츠 라멘",
+        "price": 10000
+      },
+      {
+        "name": "매운 카라미소 라멘",
+        "price": 10500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 11,
+    "name": "서교동백반",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "엄마손 제육볶음 백반",
+        "price": 8500
+      },
+      {
+        "name": "보글보글 차돌 된장찌개",
+        "price": 8000
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 12,
+    "name": "공덕족발",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "한방 왕족발 (중)",
+        "price": 32000
+      },
+      {
+        "name": "매콤 직화 불족발",
+        "price": 34000
+      }
+    ],
+    "priceRange": "30000-35000"
+  },
+  {
+    "id": 13,
+    "name": "상수타코",
+    "district": "마포구",
+    "dong": "상수동",
+    "nearStation": "상수",
+    "address": "서울특별시 마포구 상수동 ...",
+    "category": "기타",
+    "menus": [
+      {
+        "name": "까르니따스 타코 2p",
+        "price": 10000
+      },
+      {
+        "name": "비프 파히타 보울",
+        "price": 16000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 14,
+    "name": "도화불짬뽕",
+    "district": "마포구",
+    "dong": "도화동",
+    "nearStation": "마포",
+    "address": "서울특별시 마포구 도화동 ...",
+    "category": "중식",
+    "menus": [
+      {
+        "name": "직화 해물 불짬뽕",
+        "price": 9500
+      },
+      {
+        "name": "바삭 찹쌀 탕수육 (소)",
+        "price": 15000
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 15,
+    "name": "망원티라미수",
+    "district": "마포구",
+    "dong": "망원동",
+    "nearStation": "망원",
+    "address": "서울특별시 마포구 망원동 ...",
+    "category": "카페",
+    "menus": [
+      {
+        "name": "오리지널 컵 티라미수",
+        "price": 7000
+      },
+      {
+        "name": "생딸기 듬뿍 티라미수",
+        "price": 8500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 16,
+    "name": "대흥부대찌개",
+    "district": "마포구",
+    "dong": "대흥동",
+    "nearStation": "대흥",
+    "address": "서울특별시 마포구 대흥동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "의정부식 스팸 부대찌개",
+        "price": 10000
+      },
+      {
+        "name": "우삼겹 부대찌개",
+        "price": 12000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 17,
+    "name": "상암수제버거",
+    "district": "마포구",
+    "dong": "상암동",
+    "nearStation": "디지털미디어시티",
+    "address": "서울특별시 마포구 상암동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "클래식 아메리칸 치즈버거",
+        "price": 10500
+      },
+      {
+        "name": "베이컨 할라피뇨 버거",
+        "price": 12500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 18,
+    "name": "연남마라탕",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "중식",
+    "menus": [
+      {
+        "name": "내맘대로 소고기 마라탕",
+        "price": 13000
+      },
+      {
+        "name": "새콤달콤 꿔바로우",
+        "price": 16000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 19,
+    "name": "서교화덕피자",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "마르게리따 화덕 피자",
+        "price": 20000
+      },
+      {
+        "name": "고르곤졸라 화덕 피자",
+        "price": 23000
+      }
+    ],
+    "priceRange": "20000-25000"
+  },
+  {
+    "id": 20,
+    "name": "합정이자카야",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "제철 모둠 숙성 사시미",
+        "price": 38000
+      },
+      {
+        "name": "수제 숯불 야키토리 5종",
+        "price": 16000
+      }
+    ],
+    "priceRange": "25000-30000"
+  },
+  {
+    "id": 21,
+    "name": "공덕그린샐러드",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "기타",
+    "menus": [
+      {
+        "name": "수비드 닭가슴살 샐러드 볼",
+        "price": 10500
+      },
+      {
+        "name": "생연어 아보카도 샐러드 볼",
+        "price": 13500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 22,
+    "name": "상수카츠",
+    "district": "마포구",
+    "dong": "상수동",
+    "nearStation": "상수",
+    "address": "서울특별시 마포구 상수동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "프리미엄 특 로스카츠",
+        "price": 15000
+      },
+      {
+        "name": "부드러운 히레카츠 정식",
+        "price": 14000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 23,
+    "name": "망원연어덮밥",
+    "district": "마포구",
+    "dong": "망원동",
+    "nearStation": "망원",
+    "address": "서울특별시 마포구 망원동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "두툼한 생연어 덮밥(사케동)",
+        "price": 13000
+      },
+      {
+        "name": "반반 덮밥 (생연어+구운연어)",
+        "price": 14000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 24,
+    "name": "도화동고기집",
+    "district": "마포구",
+    "dong": "도화동",
+    "nearStation": "마포",
+    "address": "서울특별시 마포구 도화동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "숙성 통삼겹살 (150g)",
+        "price": 18000
+      },
+      {
+        "name": "이베리코 특목살 (150g)",
+        "price": 18000
+      }
+    ],
+    "priceRange": "15000-20000"
+  },
+  {
+    "id": 25,
+    "name": "상암초밥",
+    "district": "마포구",
+    "dong": "상암동",
+    "nearStation": "디지털미디어시티",
+    "address": "서울특별시 마포구 상암동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "직장인 런치 초밥 세트",
+        "price": 13000
+      },
+      {
+        "name": "상암 특선 모둠 초밥",
+        "price": 18000
+      }
+    ],
+    "priceRange": "15000-20000"
+  },
+  {
+    "id": 26,
+    "name": "연남동타이",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "아시안",
+    "menus": [
+      {
+        "name": "왕새우 팟타이",
+        "price": 13000
+      },
+      {
+        "name": "푸팟퐁커리 (소)",
+        "price": 24000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 27,
+    "name": "합정브런치",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "연어 에그 베네딕트",
+        "price": 16000
+      },
+      {
+        "name": "프렌치 토스트 브런치 플레이트",
+        "price": 17500
+      }
+    ],
+    "priceRange": "15000-20000"
+  },
+  {
+    "id": 28,
+    "name": "서교우동",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "자가제면 붓카케 우동",
+        "price": 8500
+      },
+      {
+        "name": "따뜻한 가케 우동",
+        "price": 7500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 29,
+    "name": "대흥닭갈비",
+    "district": "마포구",
+    "dong": "대흥동",
+    "nearStation": "대흥",
+    "address": "서울특별시 마포구 대흥동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "춘천식 철판 닭갈비",
+        "price": 13000
+      },
+      {
+        "name": "눈꽃 치즈 닭갈비",
+        "price": 15000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 30,
+    "name": "공덕샌드위치",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "B.L.T 클럽 샌드위치",
+        "price": 7500
+      },
+      {
+        "name": "듬뿍 에그마요 샌드위치",
+        "price": 6500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 31,
+    "name": "라 쁘띠 메종",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "프랑스",
+    "menus": [
+      {
+        "name": "시그니처 디너 코스",
+        "price": 65000
+      },
+      {
+        "name": "라 쁘띠 런치 코스",
+        "price": 35000
+      }
+    ],
+    "priceRange": "45000-50000"
+  },
+  {
+    "id": 32,
+    "name": "포 굿",
+    "district": "마포구",
+    "dong": "망원동",
+    "nearStation": "망원",
+    "address": "서울특별시 마포구 망원동 ...",
+    "category": "베트남",
+    "menus": [
+      {
+        "name": "하노이식 진한 소고기 쌀국수",
+        "price": 10500
+      },
+      {
+        "name": "매콤 해산물 쌀국수",
+        "price": 11500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 33,
+    "name": "방콕익스프레스",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 ...",
+    "category": "태국",
+    "menus": [
+      {
+        "name": "현지식 새우 팟타이",
+        "price": 11000
+      },
+      {
+        "name": "얼큰 새콤 똠얌꿍",
+        "price": 14000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 34,
+    "name": "춘천철판",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "매콤달콤 뼈없는 닭갈비",
+        "price": 14000
+      },
+      {
+        "name": "고구마 무스 치즈 닭갈비",
+        "price": 16000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 35,
+    "name": "스윗스쿱",
+    "district": "마포구",
+    "dong": "상수동",
+    "nearStation": "상수",
+    "address": "서울특별시 마포구 상수동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "수제 젤라또 싱글 컵",
+        "price": 5000
+      },
+      {
+        "name": "수제 젤라또 더블 컵",
+        "price": 8000
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 36,
+    "name": "홍라탕",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "중식",
+    "menus": [
+      {
+        "name": "셀프 소고기 마라탕 (기본)",
+        "price": 12000
+      },
+      {
+        "name": "얼얼한 마라샹궈",
+        "price": 18000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 37,
+    "name": "아미고스",
+    "district": "마포구",
+    "dong": "상암동",
+    "nearStation": "디지털미디어시티",
+    "address": "서울특별시 마포구 상암동 ...",
+    "category": "멕시칸",
+    "menus": [
+      {
+        "name": "비프 스테이크 타코 2p",
+        "price": 12000
+      },
+      {
+        "name": "그릴드 치킨 퀘사디아",
+        "price": 15000
+      }
+    ],
+    "priceRange": "15000-20000"
+  },
+  {
+    "id": 38,
+    "name": "초록식탁",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "비건",
+    "menus": [
+      {
+        "name": "구운 채소 템페 샐러드 볼",
+        "price": 12500
+      },
+      {
+        "name": "비건 두부 텐더 랩",
+        "price": 11000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 39,
+    "name": "오븐오븐",
+    "district": "마포구",
+    "dong": "망원동",
+    "nearStation": "망원",
+    "address": "서울특별시 마포구 망원동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "프랑스 발효버터 소금빵",
+        "price": 3500
+      },
+      {
+        "name": "앙버터 프레첼",
+        "price": 5500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 40,
+    "name": "만두공방",
+    "district": "마포구",
+    "dong": "도화동",
+    "nearStation": "마포",
+    "address": "서울특별시 마포구 도화동 ...",
+    "category": "중식",
+    "menus": [
+      {
+        "name": "육즙 가득 샤오롱바오",
+        "price": 8500
+      },
+      {
+        "name": "통새우 하가우",
+        "price": 9500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 41,
+    "name": "그릴마스터",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "블랙 앵거스 티본 스테이크 (500g)",
+        "price": 75000
+      },
+      {
+        "name": "드라이에이징 채끝 등심 스테이크",
+        "price": 42000
+      }
+    ],
+    "priceRange": "35000-40000"
+  },
+  {
+    "id": 42,
+    "name": "바다마을",
+    "district": "마포구",
+    "dong": "상암동",
+    "nearStation": "디지털미디어시티",
+    "address": "서울특별시 마포구 상암동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "바다마을 특선 초밥 세트",
+        "price": 24000
+      },
+      {
+        "name": "광어+우럭 활어회 모둠",
+        "price": 45000
+      }
+    ],
+    "priceRange": "20000-25000"
+  },
+  {
+    "id": 43,
+    "name": "밀밭",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "한우 라구 볼로네제 생면 파스타",
+        "price": 18000
+      },
+      {
+        "name": "트러플 크림 감자 뇨끼",
+        "price": 17500
+      }
+    ],
+    "priceRange": "15000-20000"
+  },
+  {
+    "id": 44,
+    "name": "할매가마솥",
+    "district": "마포구",
+    "dong": "대흥동",
+    "nearStation": "대흥",
+    "address": "서울특별시 마포구 대흥동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "가마솥 진국 순대국",
+        "price": 9000
+      },
+      {
+        "name": "얼큰 내장 국밥",
+        "price": 9500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 45,
+    "name": "펄인더컵",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "오리지널 브라운슈가 밀크티",
+        "price": 5500
+      },
+      {
+        "name": "타로 코코넛 버블티",
+        "price": 5500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 46,
+    "name": "치즈바이트",
+    "district": "마포구",
+    "dong": "상수동",
+    "nearStation": "상수",
+    "address": "서울특별시 마포구 상수동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "뉴욕 스타일 페퍼로니 피자 (홀)",
+        "price": 22000
+      },
+      {
+        "name": "치즈 폭탄 시카고 피자 (홀)",
+        "price": 25000
+      }
+    ],
+    "priceRange": "20000-25000"
+  },
+  {
+    "id": 47,
+    "name": "스파이스루트",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "인도",
+    "menus": [
+      {
+        "name": "버터 치킨 마크니 커리",
+        "price": 14000
+      },
+      {
+        "name": "팔락 파니르 (시금치 커리)",
+        "price": 14500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 48,
+    "name": "육즙가득",
+    "district": "마포구",
+    "dong": "망원동",
+    "nearStation": "망원",
+    "address": "서울특별시 마포구 망원동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "14일 숙성 통삼겹살",
+        "price": 17000
+      },
+      {
+        "name": "두툼 목살 소금구이",
+        "price": 17000
+      }
+    ],
+    "priceRange": "15000-20000"
+  },
+  {
+    "id": 49,
+    "name": "하노이별",
+    "district": "마포구",
+    "dong": "용강동",
+    "nearStation": "마포",
+    "address": "서울특별시 마포구 용강동 ...",
+    "category": "베트남",
+    "menus": [
+      {
+        "name": "시원한 양지 쌀국수",
+        "price": 9500
+      },
+      {
+        "name": "매콤 숯불 돼지고기 덮밥",
+        "price": 10000
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 50,
+    "name": "슈가크래프트",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "리얼 마다가스카르 바닐라 뚱카롱",
+        "price": 3500
+      },
+      {
+        "name": "선물용 수제 마카롱 세트 (6구)",
+        "price": 18000
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 51,
+    "name": "바삭카츠",
+    "district": "마포구",
+    "dong": "성산동",
+    "nearStation": "마포구청",
+    "address": "서울특별시 마포구 성산동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "제주 흑돼지 로스카츠",
+        "price": 12500
+      },
+      {
+        "name": "모짜렐라 치즈카츠",
+        "price": 14000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 52,
+    "name": "발리문",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "인도네시아",
+    "menus": [
+      {
+        "name": "발리식 볶음밥 나시고랭",
+        "price": 13000
+      },
+      {
+        "name": "치킨 미고랭",
+        "price": 13000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 53,
+    "name": "젤라떼리아",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "리조 (이천쌀) 젤라또",
+        "price": 6000
+      },
+      {
+        "name": "시칠리아 피스타치오 젤라또",
+        "price": 6500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 54,
+    "name": "달빛술상",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 ...",
+    "category": "일식",
+    "menus": [
+      {
+        "name": "계절 사시미 모리아와세",
+        "price": 45000
+      },
+      {
+        "name": "명란 치즈 계란말이",
+        "price": 18000
+      }
+    ],
+    "priceRange": "25000-30000"
+  },
+  {
+    "id": 55,
+    "name": "패티앤번",
+    "district": "마포구",
+    "dong": "망원동",
+    "nearStation": "망원",
+    "address": "서울특별시 마포구 망원동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "더블 패티 치즈버거",
+        "price": 12000
+      },
+      {
+        "name": "갈릭 버터 프라이즈",
+        "price": 6500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 56,
+    "name": "빨간지붕",
+    "district": "마포구",
+    "dong": "도화동",
+    "nearStation": "마포",
+    "address": "서울특별시 마포구 도화동 ...",
+    "category": "분식",
+    "menus": [
+      {
+        "name": "추억의 학교 앞 떡볶이",
+        "price": 4000
+      },
+      {
+        "name": "수제 모둠 튀김 범벅",
+        "price": 8500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 57,
+    "name": "불향반점",
+    "district": "마포구",
+    "dong": "상암동",
+    "nearStation": "디지털미디어시티",
+    "address": "서울특별시 마포구 상암동 ...",
+    "category": "중식",
+    "menus": [
+      {
+        "name": "불맛 차돌 고기짬뽕",
+        "price": 11000
+      },
+      {
+        "name": "유니 짜장면",
+        "price": 7500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 58,
+    "name": "크루아상랩",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "AOP 버터 오리지널 크루아상",
+        "price": 4500
+      },
+      {
+        "name": "잠봉뵈르 크루아상 샌드위치",
+        "price": 9500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 59,
+    "name": "보울오브스프",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "단호박 크림 스프 세트",
+        "price": 9500
+      },
+      {
+        "name": "트러플 양송이 스프 세트",
+        "price": 10500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 60,
+    "name": "마라공방",
+    "district": "마포구",
+    "dong": "대흥동",
+    "nearStation": "대흥",
+    "address": "서울특별시 마포구 대흥동 ...",
+    "category": "중식",
+    "menus": [
+      {
+        "name": "얼얼한 소고기 마라샹궈",
+        "price": 18000
+      },
+      {
+        "name": "바삭 쫀득 꿔바로우 (소)",
+        "price": 14000
+      }
+    ],
+    "priceRange": "15000-20000"
+  },
+  {
+    "id": 61,
+    "name": "사와디캅",
+    "district": "마포구",
+    "dong": "성산동",
+    "nearStation": "마포구청",
+    "address": "서울특별시 마포구 성산동 ...",
+    "category": "태국",
+    "menus": [
+      {
+        "name": "현지식 똠얌 쌀국수",
+        "price": 11500
+      },
+      {
+        "name": "코코넛 그린 커리",
+        "price": 12500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 62,
+    "name": "플러피",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "오리지널 수플레 팬케이크",
+        "price": 14000
+      },
+      {
+        "name": "계절 과일 듬뿍 수플레",
+        "price": 18000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 63,
+    "name": "알로하포케",
+    "district": "마포구",
+    "dong": "상암동",
+    "nearStation": "디지털미디어시티",
+    "address": "서울특별시 마포구 상암동 ...",
+    "category": "기타",
+    "menus": [
+      {
+        "name": "하와이안 클래식 참치 포케",
+        "price": 12500
+      },
+      {
+        "name": "스파이시 크림 생연어 포케",
+        "price": 13500
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 64,
+    "name": "훠궈야",
+    "district": "마포구",
+    "dong": "서교동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 서교동 ...",
+    "category": "중식",
+    "menus": [
+      {
+        "name": "평일 런치 소고기 훠궈 세트",
+        "price": 18000
+      },
+      {
+        "name": "프리미엄 훠궈 무한리필 (디너)",
+        "price": 28000
+      }
+    ],
+    "priceRange": "25000-30000"
+  },
+  {
+    "id": 65,
+    "name": "크로플하우스",
+    "district": "마포구",
+    "dong": "망원동",
+    "nearStation": "망원",
+    "address": "서울특별시 마포구 망원동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "메이플 시럽 크로플",
+        "price": 5500
+      },
+      {
+        "name": "브라운치즈 아이스크림 크로플",
+        "price": 8500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 66,
+    "name": "바베큐피트",
+    "district": "마포구",
+    "dong": "상수동",
+    "nearStation": "상수",
+    "address": "서울특별시 마포구 상수동 ...",
+    "category": "양식",
+    "menus": [
+      {
+        "name": "텍사스 브리스킷 바베큐 플래터",
+        "price": 35000
+      },
+      {
+        "name": "스모크 바베큐 폭립 하프",
+        "price": 28000
+      }
+    ],
+    "priceRange": "30000-35000"
+  },
+  {
+    "id": 67,
+    "name": "오색찬란",
+    "district": "마포구",
+    "dong": "공덕동",
+    "nearStation": "공덕",
+    "address": "서울특별시 마포구 공덕동 ...",
+    "category": "한식",
+    "menus": [
+      {
+        "name": "신선한 한우 육회 비빔밥",
+        "price": 12000
+      },
+      {
+        "name": "건강 산채 나물 비빔밥",
+        "price": 9000
+      }
+    ],
+    "priceRange": "10000-15000"
+  },
+  {
+    "id": 68,
+    "name": "타르트팩토리",
+    "district": "마포구",
+    "dong": "합정동",
+    "nearStation": "합정",
+    "address": "서울특별시 마포구 합정동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "샤인머스캣 생과일 타르트",
+        "price": 8500
+      },
+      {
+        "name": "클래식 에그 타르트",
+        "price": 3500
+      }
+    ],
+    "priceRange": "5000-10000"
+  },
+  {
+    "id": 69,
+    "name": "올라바르셀로나",
+    "district": "마포구",
+    "dong": "연남동",
+    "nearStation": "홍대입구",
+    "address": "서울특별시 마포구 연남동 ...",
+    "category": "스페인",
+    "menus": [
+      {
+        "name": "정통 해산물 빠에야",
+        "price": 28000
+      },
+      {
+        "name": "감바스 알 아히요",
+        "price": 22000
+      }
+    ],
+    "priceRange": "20000-25000"
+  },
+  {
+    "id": 70,
+    "name": "눈꽃마을",
+    "district": "마포구",
+    "dong": "도화동",
+    "nearStation": "마포",
+    "address": "서울특별시 마포구 도화동 ...",
+    "category": "디저트",
+    "menus": [
+      {
+        "name": "순수 100% 우유 눈꽃빙수",
+        "price": 10000
+      },
+      {
+        "name": "생망고 가득 빙수",
+        "price": 16000
+      }
+    ],
+    "priceRange": "10000-15000"
+  }
+]
