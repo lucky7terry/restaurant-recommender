@@ -353,20 +353,20 @@ restaurants.filter(
 
 ## 식당 데이터에 역 거리 정보 추가
 
-# 작업 지시: 식당 데이터에 역 거리 필드 추가
+1. 작업 지시: 식당 데이터에 역 거리 필드 추가
 
 현재 저장소의 식당 추천 서비스에서 각 식당 데이터에 가까운 역으로부터의 거리 정보를 추가해줘.
 
-## 현재 구조 확인
+2. 현재 구조 확인
 
 - 실제 앱에서 사용하는 데이터 파일은 `frontend/src/data/restaurants.json`이다.
 - `frontend/src/repositories/restaurantRepository.js`에서 `../data/restaurants.json`을 import해서 사용하고 있다.
 - 루트의 `data/restaurants.sample.json`도 샘플 데이터로 존재하므로, 데이터 스키마 일관성을 위해 함께 수정한다.
 - 기존 추천 로직은 예산, 카테고리, 목적 중심으로 동작하므로 이번 작업에서는 거리 기반 필터링이나 정렬은 추가하지 않는다.
 
-## 수정 요구사항
+3.  수정 요구사항
 
-### 1. 식당 데이터에 거리 필드 추가
+4. 식당 데이터에 거리 필드 추가
 
 `frontend/src/data/restaurants.json`의 모든 식당 객체에 `distanceFromStation` 필드를 추가해줘.
 
@@ -377,3 +377,318 @@ restaurants.filter(
 - 값 범위: 0 이상 500 이하의 정수
 - `nearStation` 바로 다음 줄에 추가하는 것을 권장
 - 기존 필드명과 기존 값은 절대 변경하지 말 것
+
+## 가까운 역 선택 필터 추가
+1. 작업 지시: 가까운 역 선택 필터 추가
+
+2. 작업 목표
+
+식당 추천 조건에 **가까운 역 선택 필터**를 추가한다.
+
+사용자가 역을 하나 이상 선택하면, 해당 역이 `nearStation` 값으로 들어있는 식당만 추천 결과에 나오도록 한다.
+
+예를 들어 사용자가 `마포구청`을 선택하면 아래 조건을 만족하는 식당만 추천된다.
+
+```json
+"nearStation": "마포구청"
+```
+
+역은 복수 선택이 가능해야 한다.
+
+이번 작업은 **역 선택 필터 기능 추가**가 목적이다.
+
+3. 현재 구조
+
+현재 앱은 아래 조건을 기준으로 식당을 추천한다.
+
+```text
+- 예산 budget
+- 음식 종류 categories
+- 식사 목적 purpose
+```
+
+현재 `App.jsx`에서는 `budget`, `categories`, `purpose` 상태를 관리하고 있고, `handleSubmit`에서 이 값을 `recommendRestaurants`로 전달한다.
+
+현재 `frontend/src/specifications/index.js`에서는 아래 Specification들을 조합해서 필터링한다.
+
+```text
+- BudgetSpecification
+- CategorySpecification
+- PurposeSpecification
+```
+
+이번 작업에서는 기존 구조를 유지하면서 `StationSpecification`을 추가한다.
+
+4. 수정 대상 파일
+
+아래 파일들을 수정하거나 추가한다.
+
+```text
+frontend/src/App.jsx
+frontend/src/components/SearchForm.jsx
+frontend/src/specifications/index.js
+frontend/src/specifications/StationSpecification.js
+```
+
+필요한 경우 CSS 파일도 최소한으로 수정한다.
+
+```text
+frontend/src/App.css
+```
+
+5.  세부 요구사항
+
+5-1. App.jsx에 역 선택 상태 추가
+
+`App.jsx`에 선택된 역 목록을 저장하는 상태를 추가한다.
+
+```jsx
+const [stations, setStations] = useState([])
+```
+
+역은 복수 선택이 가능해야 하므로 배열로 관리한다.
+
+카테고리 선택과 비슷하게 역 선택 토글 함수를 추가한다.
+
+예시:
+
+```jsx
+const handleStationToggle = (selectedStation) => {
+  setStations((currentStations) =>
+    currentStations.includes(selectedStation)
+      ? currentStations.filter((station) => station !== selectedStation)
+      : [...currentStations, selectedStation],
+  )
+}
+```
+
+`handleSubmit`에서 추천 조건에 `stations`를 함께 전달한다.
+
+```jsx
+runRecommendation({
+  budget: budget === '' ? '' : Number(budget),
+  categories,
+  purpose,
+  stations,
+})
+```
+
+초기화 함수에서도 `stations`를 빈 배열로 초기화한다.
+
+```jsx
+setStations([])
+```
+
+`SearchForm`에도 아래 props를 전달한다.
+
+```jsx
+stations={stations}
+onStationToggle={handleStationToggle}
+```
+
+5-2. SearchForm.jsx에 역 선택 UI 추가
+
+`SearchForm.jsx`에 가까운 역 선택 영역을 추가한다.
+
+역 목록은 현재 데이터에 있는 역을 기준으로 작성한다.
+
+```jsx
+const STATION_OPTIONS = [
+  '홍대입구',
+  '공덕',
+  '합정',
+  '상수',
+  '마포',
+  '망원',
+  '디지털미디어시티',
+  '대흥',
+  '마포구청',
+]
+```
+
+`SearchForm` props에 아래 값을 추가한다.
+
+```jsx
+stations,
+onStationToggle,
+```
+
+음식 종류 선택 UI처럼 버튼 방식으로 구현한다.
+
+화면 문구는 아래처럼 작성한다.
+
+```text
+NEAR STATION (가까운 역)
+```
+
+각 역 버튼은 선택되었을 때 기존 `category-button is-selected` 스타일을 재사용한다.
+
+예시 구조:
+
+```jsx
+<div className="field-group">
+  <p className="field-label">
+    NEAR STATION <span>(가까운 역)</span>
+  </p>
+  <div className="category-grid">
+    {STATION_OPTIONS.map((station) => (
+      <button
+        key={station}
+        type="button"
+        className={`category-button${
+          stations.includes(station) ? ' is-selected' : ''
+        }`}
+        aria-pressed={stations.includes(station)}
+        onClick={() => onStationToggle(station)}
+      >
+        {station}
+      </button>
+    ))}
+  </div>
+</div>
+```
+
+새로운 UI를 만들되 기존 디자인 흐름과 최대한 맞춘다.
+
+5-3. StationSpecification 추가
+
+아래 파일을 새로 만든다.
+
+```text
+frontend/src/specifications/StationSpecification.js
+```
+
+선택된 역 목록에 식당의 `nearStation`이 포함되어 있으면 통과하도록 작성한다.
+
+```jsx
+export function createStationSpecification(stations) {
+  return {
+    isSatisfiedBy(restaurant) {
+      return stations.includes(restaurant.nearStation)
+    },
+    getReason() {
+      return '선택한 역과 가깝습니다.'
+    },
+  }
+}
+```
+
+추천 이유에는 아래 문구가 나오도록 한다.
+
+```text
+선택한 역과 가깝습니다.
+```
+
+5-4. specifications/index.js에 StationSpecification 연결
+
+`frontend/src/specifications/index.js`에서 `StationSpecification`을 import한다.
+
+```jsx
+import { createStationSpecification } from './StationSpecification'
+```
+
+`specificationFactories`에 `stations` 조건을 추가한다.
+
+```jsx
+{
+  key: 'stations',
+  create(filters) {
+    return createStationSpecification(filters.stations)
+  },
+}
+```
+
+기존 `budget`, `categories`, `purpose` 조건은 삭제하거나 변경하지 않는다.
+
+### 5. ResultList 필터 요약에 역 조건 추가
+
+추천 결과 화면의 조건 요약에 선택한 역도 표시되도록 한다.
+
+현재 `ResultList.jsx`의 `buildFilterSummary`에서 카테고리, 목적, 예산을 요약하고 있다면 `stations`도 추가한다.
+
+예시:
+
+```jsx
+const stations = filters.stations ?? []
+const stationSummary = stations.length > 0 ? `${stations.join(', ')}역` : ''
+```
+
+요약 순서는 아래처럼 해도 된다.
+
+```text
+음식 종류 · 가까운 역 · 식사 목적 · 예산
+```
+
+예시 결과:
+
+```text
+한식 · 마포구청역 · 혼밥 · 15,000원 이하
+```
+
+복수 선택 시:
+
+```text
+한식 · 마포구청, 망원역 · 혼밥 · 15,000원 이하
+```
+
+문구가 어색하면 자연스럽게 다듬어도 된다.
+
+6. EmptyState 동작 확인
+
+역 조건 때문에 추천 결과가 없을 수도 있다.
+
+기존 EmptyState가 깨지지 않도록 확인한다.
+
+이번 작업에서 EmptyState에 새로운 버튼이나 기능을 추가할 필요는 없다.
+
+7. 작업 범위 제한
+
+이번 작업에서는 아래 작업을 하지 않는다.
+
+```text
+- 거리 기반 정렬 추가
+- distanceFromStation 기준 필터 추가
+- 지도 기능 추가
+- 주소 검색 기능 추가
+- 역 선택과 거리 선택을 동시에 구현
+- 데이터 파일의 기존 값 변경
+- 불필요한 파일 생성
+```
+
+이번 요구사항은 `nearStation` 값 기준 필터링이다.
+`distanceFromStation`은 이번 필터 조건에 사용하지 않는다.
+
+8. 검증 방법
+
+수정 후 아래 명령어를 실행한다.
+
+```bash
+cd frontend
+npm run lint
+npm run build
+```
+
+확인해야 할 동작은 아래와 같다.
+
+```text
+- 역을 선택하지 않으면 기존 추천 기능이 그대로 동작한다.
+- 역을 하나 선택하면 해당 nearStation 값을 가진 식당만 추천된다.
+- 역을 여러 개 선택하면 선택한 역 중 하나에 해당하는 식당들이 추천된다.
+- 추천 이유에 "선택한 역과 가깝습니다." 문구가 표시된다.
+- 조건 초기화를 누르면 역 선택도 초기화된다.
+- 기존 예산, 음식 종류, 식사 목적 필터가 깨지지 않는다.
+```
+
+9. 완료 후 보고 내용
+
+작업이 끝나면 아래 내용만 간단히 정리해서 알려줘.
+
+```text
+- 수정한 파일 목록
+- 추가한 상태값/필터명
+- 새로 추가한 Specification 파일
+- 역 복수 선택 동작 여부
+- 추천 이유 문구 표시 여부
+- npm run lint 결과
+- npm run build 결과
+```
