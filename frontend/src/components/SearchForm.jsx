@@ -21,11 +21,15 @@ const FOOD_CATEGORIES = [
   '기타',
 ]
 
+const DINING_PURPOSES = ['혼밥', '데이트', '친구모임', '직장점심']
+
 function SearchForm({
   budget,
   categories,
+  purpose,
   onBudgetChange,
   onCategoryToggle,
+  onPurposeChange,
   onSubmit,
   onReset,
 }) {
@@ -72,6 +76,31 @@ function SearchForm({
               {foodCategory}
             </button>
           ))}
+        </div>
+      </div>
+
+      <div className="field-group">
+        <p className="field-label">
+          DINING PURPOSE <span>(식사 목적)</span>
+        </p>
+        <div className="purpose-grid">
+          {DINING_PURPOSES.map((diningPurpose) => {
+            const isSelected = purpose === diningPurpose
+
+            return (
+              <button
+                key={diningPurpose}
+                type="button"
+                className={`category-button${
+                  isSelected ? ' is-selected' : ''
+                }`}
+                aria-pressed={isSelected}
+                onClick={() => onPurposeChange(isSelected ? '' : diningPurpose)}
+              >
+                {diningPurpose}
+              </button>
+            )
+          })}
         </div>
       </div>
 
