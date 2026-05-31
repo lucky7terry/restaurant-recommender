@@ -7,6 +7,37 @@ function buildReasons(restaurant, activeSpecifications) {
     .map((specification) => specification.getReason())
 }
 
+function getDistanceFromStation(restaurant) {
+  return restaurant.distanceFromStation ?? Number.POSITIVE_INFINITY
+}
+
+function getLowestMenuPrice(restaurant) {
+  return Math.min(...restaurant.menus.map((menu) => menu.price))
+}
+
+function sortRestaurants(restaurants, sortOption = 'distance') {
+  return [...restaurants].sort((firstRestaurant, secondRestaurant) => {
+    if (sortOption === 'price-desc') {
+      return (
+        getLowestMenuPrice(secondRestaurant) -
+        getLowestMenuPrice(firstRestaurant)
+      )
+    }
+
+    if (sortOption === 'price-asc') {
+      return (
+        getLowestMenuPrice(firstRestaurant) -
+        getLowestMenuPrice(secondRestaurant)
+      )
+    }
+
+    return (
+      getDistanceFromStation(firstRestaurant) -
+      getDistanceFromStation(secondRestaurant)
+    )
+  })
+}
+
 export function recommendRestaurants(filters = {}) {
   const categories = filters.categories ?? filters.category
   const normalizedFilters = {
@@ -15,7 +46,7 @@ export function recommendRestaurants(filters = {}) {
   }
   const activeSpecifications = createActiveSpecifications(normalizedFilters)
 
-  return getRestaurants()
+  const recommendations = getRestaurants()
     .filter((restaurant) =>
       activeSpecifications.every((specification) =>
         specification.isSatisfiedBy(restaurant),
@@ -25,4 +56,6 @@ export function recommendRestaurants(filters = {}) {
       ...restaurant,
       reasons: buildReasons(restaurant, activeSpecifications),
     }))
+
+  return sortRestaurants(recommendations, normalizedFilters.sortOption)
 }

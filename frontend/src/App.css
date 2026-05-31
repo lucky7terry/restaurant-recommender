@@ -238,6 +238,35 @@
   text-align: right;
 }
 
+.result-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.sort-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #8d8d8d;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.sort-control select {
+  min-height: 38px;
+  padding: 0 34px 0 12px;
+  border: 1px solid #dedad3;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #242424;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 .back-action {
   flex: 0 0 auto;
   min-height: 42px;
@@ -511,6 +540,14 @@
   .result-topbar h1,
   .result-topbar p {
     text-align: left;
+  }
+
+  .result-heading {
+    align-items: stretch;
+  }
+
+  .sort-control {
+    justify-content: space-between;
   }
 
   .back-action {

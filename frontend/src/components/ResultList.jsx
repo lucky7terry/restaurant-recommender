@@ -28,16 +28,35 @@ function buildFilterSummary(filters) {
   return summaryItems.join(' · ')
 }
 
-function ResultList({ filters, restaurants, onEditFilters }) {
+function ResultList({
+  filters,
+  restaurants,
+  sortOption,
+  onSortOptionChange,
+  onEditFilters,
+}) {
   return (
     <section className="result-screen" aria-labelledby="result-title">
       <div className="result-topbar">
         <button className="back-action" type="button" onClick={onEditFilters}>
           ← 조건 수정
         </button>
-        <div>
-          <h1 id="result-title">추천 결과 ({restaurants.length}곳)</h1>
-          <p>{buildFilterSummary(filters)}</p>
+        <div className="result-heading">
+          <div>
+            <h1 id="result-title">추천 결과 ({restaurants.length}곳)</h1>
+            <p>{buildFilterSummary(filters)}</p>
+          </div>
+          <label className="sort-control">
+            <span>정렬 기준</span>
+            <select
+              value={sortOption}
+              onChange={(event) => onSortOptionChange(event.target.value)}
+            >
+              <option value="distance">가까운 순</option>
+              <option value="price-desc">높은 가격순</option>
+              <option value="price-asc">낮은 가격순</option>
+            </select>
+          </label>
         </div>
       </div>
 

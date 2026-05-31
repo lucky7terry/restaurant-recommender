@@ -6,18 +6,25 @@ import SearchForm from './components/SearchForm'
 import { recommendRestaurants } from './services/recommendService'
 import './App.css'
 
+const DEFAULT_SORT_OPTION = 'distance'
+
 function App() {
   const [budget, setBudget] = useState('')
   const [categories, setCategories] = useState([])
   const [purpose, setPurpose] = useState('')
   const [stations, setStations] = useState([])
+  const [sortOption, setSortOption] = useState(DEFAULT_SORT_OPTION)
   const [submittedFilters, setSubmittedFilters] = useState(null)
   const [recommendations, setRecommendations] = useState([])
 
   const runRecommendation = (filters) => {
-    const recommendedRestaurants = recommendRestaurants(filters)
+    const nextFilters = {
+      ...filters,
+      sortOption: filters.sortOption ?? sortOption,
+    }
+    const recommendedRestaurants = recommendRestaurants(nextFilters)
 
-    setSubmittedFilters(filters)
+    setSubmittedFilters(nextFilters)
     setRecommendations(recommendedRestaurants)
   }
 
@@ -27,6 +34,7 @@ function App() {
       categories,
       purpose,
       stations,
+      sortOption,
     })
   }
 
@@ -51,6 +59,7 @@ function App() {
     setCategories([])
     setPurpose('')
     setStations([])
+    setSortOption(DEFAULT_SORT_OPTION)
     setSubmittedFilters(null)
     setRecommendations([])
   }
@@ -79,6 +88,17 @@ function App() {
     setRecommendations([])
   }
 
+  const handleSortOptionChange = (nextSortOption) => {
+    setSortOption(nextSortOption)
+
+    if (submittedFilters) {
+      runRecommendation({
+        ...submittedFilters,
+        sortOption: nextSortOption,
+      })
+    }
+  }
+
   const hasSubmittedFilters = submittedFilters !== null
   const hasRecommendations = recommendations.length > 0
 
@@ -90,6 +110,8 @@ function App() {
           <ResultList
             filters={submittedFilters}
             restaurants={recommendations}
+            sortOption={sortOption}
+            onSortOptionChange={handleSortOptionChange}
             onEditFilters={handleEditFilters}
           />
         ) : hasSubmittedFilters ? (
