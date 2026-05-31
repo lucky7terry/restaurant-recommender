@@ -5,6 +5,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 117,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "한식",
     "menus": [
@@ -30,6 +31,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 154,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "양식",
     "menus": [
@@ -54,6 +56,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 191,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "한식",
     "menus": [
@@ -78,6 +81,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 228,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "일식",
     "menus": [
@@ -103,6 +107,7 @@
     "district": "마포구",
     "dong": "상수동",
     "nearStation": "상수",
+    "distanceFromStation": 265,
     "address": "서울특별시 마포구 상수동 ...",
     "category": "일식",
     "menus": [
@@ -127,6 +132,7 @@
     "district": "마포구",
     "dong": "용강동",
     "nearStation": "마포",
+    "distanceFromStation": 302,
     "address": "서울특별시 마포구 용강동 ...",
     "category": "한식",
     "menus": [
@@ -151,6 +157,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 339,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "분식",
     "menus": [
@@ -175,6 +182,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 376,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "아시안",
     "menus": [
@@ -199,6 +207,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 413,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "양식",
     "menus": [
@@ -222,6 +231,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 450,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "일식",
     "menus": [
@@ -246,6 +256,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 487,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "한식",
     "menus": [
@@ -270,6 +281,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 103,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "한식",
     "menus": [
@@ -293,6 +305,7 @@
     "district": "마포구",
     "dong": "상수동",
     "nearStation": "상수",
+    "distanceFromStation": 140,
     "address": "서울특별시 마포구 상수동 ...",
     "category": "기타",
     "menus": [
@@ -317,6 +330,7 @@
     "district": "마포구",
     "dong": "도화동",
     "nearStation": "마포",
+    "distanceFromStation": 177,
     "address": "서울특별시 마포구 도화동 ...",
     "category": "중식",
     "menus": [
@@ -342,6 +356,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 214,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "카페",
     "menus": [
@@ -366,6 +381,7 @@
     "district": "마포구",
     "dong": "대흥동",
     "nearStation": "대흥",
+    "distanceFromStation": 251,
     "address": "서울특별시 마포구 대흥동 ...",
     "category": "한식",
     "menus": [
@@ -390,6 +406,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 288,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "양식",
     "menus": [
@@ -415,6 +432,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 325,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "중식",
     "menus": [
@@ -439,6 +457,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 362,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "양식",
     "menus": [
@@ -463,6 +482,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 399,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "일식",
     "menus": [
@@ -487,6 +507,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 436,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "기타",
     "menus": [
@@ -511,6 +532,7 @@
     "district": "마포구",
     "dong": "상수동",
     "nearStation": "상수",
+    "distanceFromStation": 473,
     "address": "서울특별시 마포구 상수동 ...",
     "category": "일식",
     "menus": [
@@ -535,6 +557,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 89,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "일식",
     "menus": [
@@ -560,6 +583,7 @@
     "district": "마포구",
     "dong": "도화동",
     "nearStation": "마포",
+    "distanceFromStation": 126,
     "address": "서울특별시 마포구 도화동 ...",
     "category": "한식",
     "menus": [
@@ -584,6 +608,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 163,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "일식",
     "menus": [
@@ -608,6 +633,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 200,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "아시안",
     "menus": [
@@ -632,6 +658,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 237,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "양식",
     "menus": [
@@ -656,6 +683,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 274,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "일식",
     "menus": [
@@ -680,6 +708,7 @@
     "district": "마포구",
     "dong": "대흥동",
     "nearStation": "대흥",
+    "distanceFromStation": 311,
     "address": "서울특별시 마포구 대흥동 ...",
     "category": "한식",
     "menus": [
@@ -704,6 +733,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 348,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "양식",
     "menus": [
@@ -728,6 +758,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 385,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "프랑스",
     "menus": [
@@ -751,6 +782,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 422,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "베트남",
     "menus": [
@@ -775,6 +807,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 459,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "태국",
     "menus": [
@@ -800,6 +833,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 496,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "한식",
     "menus": [
@@ -824,6 +858,7 @@
     "district": "마포구",
     "dong": "상수동",
     "nearStation": "상수",
+    "distanceFromStation": 112,
     "address": "서울특별시 마포구 상수동 ...",
     "category": "디저트",
     "menus": [
@@ -848,6 +883,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 149,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "중식",
     "menus": [
@@ -872,6 +908,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 186,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "멕시칸",
     "menus": [
@@ -896,6 +933,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 223,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "비건",
     "menus": [
@@ -921,6 +959,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 260,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "디저트",
     "menus": [
@@ -946,6 +985,7 @@
     "district": "마포구",
     "dong": "도화동",
     "nearStation": "마포",
+    "distanceFromStation": 297,
     "address": "서울특별시 마포구 도화동 ...",
     "category": "중식",
     "menus": [
@@ -971,6 +1011,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 334,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "양식",
     "menus": [
@@ -995,6 +1036,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 371,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "일식",
     "menus": [
@@ -1019,6 +1061,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 408,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "양식",
     "menus": [
@@ -1043,6 +1086,7 @@
     "district": "마포구",
     "dong": "대흥동",
     "nearStation": "대흥",
+    "distanceFromStation": 445,
     "address": "서울특별시 마포구 대흥동 ...",
     "category": "한식",
     "menus": [
@@ -1067,6 +1111,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 482,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "디저트",
     "menus": [
@@ -1092,6 +1137,7 @@
     "district": "마포구",
     "dong": "상수동",
     "nearStation": "상수",
+    "distanceFromStation": 98,
     "address": "서울특별시 마포구 상수동 ...",
     "category": "양식",
     "menus": [
@@ -1116,6 +1162,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 135,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "인도",
     "menus": [
@@ -1141,6 +1188,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 172,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "한식",
     "menus": [
@@ -1165,6 +1213,7 @@
     "district": "마포구",
     "dong": "용강동",
     "nearStation": "마포",
+    "distanceFromStation": 209,
     "address": "서울특별시 마포구 용강동 ...",
     "category": "베트남",
     "menus": [
@@ -1189,6 +1238,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 246,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "디저트",
     "menus": [
@@ -1213,6 +1263,7 @@
     "district": "마포구",
     "dong": "성산동",
     "nearStation": "마포구청",
+    "distanceFromStation": 283,
     "address": "서울특별시 마포구 성산동 ...",
     "category": "일식",
     "menus": [
@@ -1237,6 +1288,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 320,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "인도네시아",
     "menus": [
@@ -1261,6 +1313,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 357,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "디저트",
     "menus": [
@@ -1285,6 +1338,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 394,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "일식",
     "menus": [
@@ -1309,6 +1363,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 431,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "양식",
     "menus": [
@@ -1334,6 +1389,7 @@
     "district": "마포구",
     "dong": "도화동",
     "nearStation": "마포",
+    "distanceFromStation": 468,
     "address": "서울특별시 마포구 도화동 ...",
     "category": "분식",
     "menus": [
@@ -1359,6 +1415,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 84,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "중식",
     "menus": [
@@ -1384,6 +1441,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 121,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "디저트",
     "menus": [
@@ -1409,6 +1467,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 158,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "양식",
     "menus": [
@@ -1434,6 +1493,7 @@
     "district": "마포구",
     "dong": "대흥동",
     "nearStation": "대흥",
+    "distanceFromStation": 195,
     "address": "서울특별시 마포구 대흥동 ...",
     "category": "중식",
     "menus": [
@@ -1458,6 +1518,7 @@
     "district": "마포구",
     "dong": "성산동",
     "nearStation": "마포구청",
+    "distanceFromStation": 232,
     "address": "서울특별시 마포구 성산동 ...",
     "category": "태국",
     "menus": [
@@ -1482,6 +1543,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 269,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "디저트",
     "menus": [
@@ -1506,6 +1568,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 306,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "기타",
     "menus": [
@@ -1530,6 +1593,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 343,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "중식",
     "menus": [
@@ -1554,6 +1618,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 380,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "디저트",
     "menus": [
@@ -1578,6 +1643,7 @@
     "district": "마포구",
     "dong": "상수동",
     "nearStation": "상수",
+    "distanceFromStation": 417,
     "address": "서울특별시 마포구 상수동 ...",
     "category": "양식",
     "menus": [
@@ -1601,6 +1667,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 454,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "한식",
     "menus": [
@@ -1625,6 +1692,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 491,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "디저트",
     "menus": [
@@ -1649,6 +1717,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 107,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "스페인",
     "menus": [
@@ -1673,6 +1742,7 @@
     "district": "마포구",
     "dong": "도화동",
     "nearStation": "마포",
+    "distanceFromStation": 144,
     "address": "서울특별시 마포구 도화동 ...",
     "category": "디저트",
     "menus": [
@@ -1697,6 +1767,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 181,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "한식",
     "menus": [
@@ -1721,6 +1792,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 218,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "중식",
     "menus": [
@@ -1746,6 +1818,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 255,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "일식",
     "menus": [
@@ -1770,6 +1843,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 292,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "양식",
     "menus": [
@@ -1794,6 +1868,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 329,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "분식",
     "menus": [
@@ -1818,6 +1893,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 366,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "패스트푸드",
     "menus": [
@@ -1842,6 +1918,7 @@
     "district": "마포구",
     "dong": "도화동",
     "nearStation": "마포",
+    "distanceFromStation": 403,
     "address": "서울특별시 마포구 도화동 ...",
     "category": "카페",
     "menus": [
@@ -1866,6 +1943,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 440,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "아시안",
     "menus": [
@@ -1890,6 +1968,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 477,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "디저트",
     "menus": [
@@ -1914,6 +1993,7 @@
     "district": "마포구",
     "dong": "상수동",
     "nearStation": "상수",
+    "distanceFromStation": 93,
     "address": "서울특별시 마포구 상수동 ...",
     "category": "치킨",
     "menus": [
@@ -1937,6 +2017,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 130,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "피자",
     "menus": [
@@ -1961,6 +2042,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 167,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "프랑스",
     "menus": [
@@ -1984,6 +2066,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 204,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "베트남",
     "menus": [
@@ -2008,6 +2091,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 241,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "태국",
     "menus": [
@@ -2032,6 +2116,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 278,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "멕시칸",
     "menus": [
@@ -2056,6 +2141,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 315,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "비건",
     "menus": [
@@ -2081,6 +2167,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 352,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "인도",
     "menus": [
@@ -2106,6 +2193,7 @@
     "district": "마포구",
     "dong": "상수동",
     "nearStation": "상수",
+    "distanceFromStation": 389,
     "address": "서울특별시 마포구 상수동 ...",
     "category": "인도네시아",
     "menus": [
@@ -2131,6 +2219,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 426,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "스페인",
     "menus": [
@@ -2155,6 +2244,7 @@
     "district": "마포구",
     "dong": "도화동",
     "nearStation": "마포",
+    "distanceFromStation": 463,
     "address": "서울특별시 마포구 도화동 ...",
     "category": "치킨",
     "menus": [
@@ -2178,6 +2268,7 @@
     "district": "마포구",
     "dong": "대흥동",
     "nearStation": "대흥",
+    "distanceFromStation": 500,
     "address": "서울특별시 마포구 대흥동 ...",
     "category": "피자",
     "menus": [
@@ -2201,6 +2292,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 116,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "패스트푸드",
     "menus": [
@@ -2225,6 +2317,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 153,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "카페",
     "menus": [
@@ -2250,6 +2343,7 @@
     "district": "마포구",
     "dong": "상암동",
     "nearStation": "디지털미디어시티",
+    "distanceFromStation": 190,
     "address": "서울특별시 마포구 상암동 ...",
     "category": "분식",
     "menus": [
@@ -2274,6 +2368,7 @@
     "district": "마포구",
     "dong": "서교동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 227,
     "address": "서울특별시 마포구 서교동 ...",
     "category": "한식",
     "menus": [
@@ -2299,6 +2394,7 @@
     "district": "마포구",
     "dong": "공덕동",
     "nearStation": "공덕",
+    "distanceFromStation": 264,
     "address": "서울특별시 마포구 공덕동 ...",
     "category": "중식",
     "menus": [
@@ -2324,6 +2420,7 @@
     "district": "마포구",
     "dong": "합정동",
     "nearStation": "합정",
+    "distanceFromStation": 301,
     "address": "서울특별시 마포구 합정동 ...",
     "category": "일식",
     "menus": [
@@ -2349,6 +2446,7 @@
     "district": "마포구",
     "dong": "연남동",
     "nearStation": "홍대입구",
+    "distanceFromStation": 338,
     "address": "서울특별시 마포구 연남동 ...",
     "category": "양식",
     "menus": [
@@ -2373,6 +2471,7 @@
     "district": "마포구",
     "dong": "망원동",
     "nearStation": "망원",
+    "distanceFromStation": 375,
     "address": "서울특별시 마포구 망원동 ...",
     "category": "디저트",
     "menus": [
@@ -2397,6 +2496,7 @@
     "district": "마포구",
     "dong": "도화동",
     "nearStation": "마포",
+    "distanceFromStation": 412,
     "address": "서울특별시 마포구 도화동 ...",
     "category": "카페",
     "menus": [
