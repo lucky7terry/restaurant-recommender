@@ -4,7 +4,7 @@ import { createActiveSpecifications } from '../specifications'
 function buildReasons(restaurant, activeSpecifications) {
   return activeSpecifications
     .filter((specification) => specification.isSatisfiedBy(restaurant))
-    .map((specification) => specification.getReason())
+    .map((specification) => specification.getReason(restaurant))
 }
 
 function getDistanceFromStation(restaurant) {
