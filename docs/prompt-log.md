@@ -600,7 +600,7 @@ import { createStationSpecification } from './StationSpecification'
 
 기존 `budget`, `categories`, `purpose` 조건은 삭제하거나 변경하지 않는다.
 
-### 5. ResultList 필터 요약에 역 조건 추가
+5-5. ResultList 필터 요약에 역 조건 추가
 
 추천 결과 화면의 조건 요약에 선택한 역도 표시되도록 한다.
 
@@ -689,6 +689,464 @@ npm run build
 - 새로 추가한 Specification 파일
 - 역 복수 선택 동작 여부
 - 추천 이유 문구 표시 여부
+- npm run lint 결과
+- npm run build 결과
+```
+
+## 추천 결과 정렬 기능 추가
+1. 작업 지시: 추천 결과 정렬 기능 추가
+
+2. 작업 목표
+
+추천 결과 리스트를 사용자가 원하는 기준으로 정렬할 수 있도록 수정한다.
+
+정렬 기준은 아래 3가지다.
+
+```text
+- 가까운 순
+- 높은 가격순
+- 낮은 가격순
+```
+
+이번 작업은 **추천 결과 정렬 기능 추가**가 목적이다.
+
+3. 수정 대상 파일
+
+아래 파일들을 중심으로 수정한다.
+
+```text
+frontend/src/App.jsx
+frontend/src/components/ResultList.jsx
+frontend/src/services/recommendService.js
+```
+
+필요한 경우 아래 파일도 최소한으로 수정한다.
+
+```text
+frontend/src/App.css
+```
+
+불필요한 새 파일은 만들지 않는다.
+
+4 세부 요구사항
+
+4-1. 정렬 기준 상태 추가
+
+`App.jsx`에 추천 결과 정렬 기준 상태를 추가한다.
+
+```jsx
+const [sortOption, setSortOption] = useState('distance')
+```
+
+정렬 옵션 값은 아래처럼 사용한다.
+
+```text
+distance: 가까운 순
+price-desc: 높은 가격순
+price-asc: 낮은 가격순
+```
+
+`ResultList`에 아래 props를 전달한다.
+
+```jsx
+sortOption={sortOption}
+onSortOptionChange={setSortOption}
+```
+
+추천 조건 초기화 시에도 정렬 기준은 기본값으로 되돌린다.
+
+```jsx
+setSortOption('distance')
+```
+
+4-2. 추천 결과 정렬 로직 추가
+
+`recommendService.js` 또는 별도 헬퍼 함수에서 추천 결과를 정렬할 수 있도록 수정한다.
+
+정렬 기준은 `filters.sortOption` 또는 별도 인자로 전달해도 된다.
+다만 구조가 너무 복잡해지지 않도록 현재 코드 스타일에 맞게 간단하게 작성한다.
+
+추천 결과는 기존 필터링을 먼저 적용한 뒤 정렬한다.
+
+```text
+1. 조건에 맞는 식당 필터링
+2. 추천 이유 추가
+3. 정렬 기준에 따라 정렬
+```
+
+4-3. 가까운 순 정렬
+
+`sortOption`이 `distance`일 때는 `distanceFromStation` 값이 작은 식당이 먼저 나오도록 정렬한다.
+
+```text
+distanceFromStation 오름차순
+```
+
+예시:
+
+```text
+120m → 180m → 340m
+```
+
+혹시 `distanceFromStation` 값이 없는 데이터가 있으면 가장 뒤로 보내도록 처리한다.
+
+4-4. 가격 정렬 기준 정의
+
+식당에는 여러 메뉴가 있으므로, 가격 정렬 기준은 **해당 식당의 메뉴 가격 중 최저가**로 한다.
+
+예를 들어 아래 식당이 있다면,
+
+```json
+"menus": [
+  {
+    "name": "A 메뉴",
+    "price": 8000
+  },
+  {
+    "name": "B 메뉴",
+    "price": 12000
+  }
+]
+```
+
+이 식당의 정렬 기준 가격은 `8000`이다.
+
+헬퍼 함수로 분리하면 좋다.
+
+```jsx
+function getLowestMenuPrice(restaurant) {
+  return Math.min(...restaurant.menus.map((menu) => menu.price))
+}
+```
+
+4-5. 높은 가격순 정렬
+
+`sortOption`이 `price-desc`일 때는 식당의 최저 메뉴 가격이 높은 식당이 먼저 나오도록 정렬한다.
+
+```text
+최저 메뉴 가격 기준 내림차순
+```
+
+예시:
+
+```text
+18000원 → 12000원 → 8000원
+```
+
+4-6. 낮은 가격순 정렬
+
+`sortOption`이 `price-asc`일 때는 식당의 최저 메뉴 가격이 낮은 식당이 먼저 나오도록 정렬한다.
+
+```text
+최저 메뉴 가격 기준 오름차순
+```
+
+예시:
+
+```text
+8000원 → 12000원 → 18000원
+```
+
+4-7. ResultList에 정렬 UI 추가
+
+`ResultList.jsx` 상단 영역에 정렬 선택 UI를 추가한다.
+
+추천 결과 제목 근처에 배치하면 된다.
+
+문구 예시:
+
+```text
+정렬 기준
+```
+
+select를 사용해서 아래 옵션을 제공한다.
+
+```jsx
+<select value={sortOption} onChange={(event) => onSortOptionChange(event.target.value)}>
+  <option value="distance">가까운 순</option>
+  <option value="price-desc">높은 가격순</option>
+  <option value="price-asc">낮은 가격순</option>
+</select>
+```
+
+디자인은 기존 결과 화면과 어색하지 않게 최소한으로 맞춘다.
+
+4-8. 정렬 변경 시 동작
+
+사용자가 정렬 기준을 바꾸면 현재 추천 결과 리스트가 즉시 바뀌어야 한다.
+
+구현 방식은 둘 중 편한 방식으로 선택한다.
+
+```text
+방법 1. sortOption 상태가 바뀔 때 recommendRestaurants를 다시 실행한다.
+방법 2. ResultList에서 전달받은 restaurants를 화면 출력 전에 정렬한다.
+```
+
+권장 방식은 **방법 1**이다.
+
+이 경우 `sortOption`도 추천 조건에 포함해서 `recommendRestaurants`에 전달한다.
+
+예시:
+
+```jsx
+runRecommendation({
+  budget: budget === '' ? '' : Number(budget),
+  categories,
+  purpose,
+  stations,
+  sortOption,
+})
+```
+
+정렬 기준이 변경되면 기존 제출된 필터를 유지한 상태로 정렬만 다시 적용한다.
+
+4-9. 추천 이유는 유지
+
+정렬 기능을 추가해도 기존 추천 이유는 사라지면 안 된다.
+
+예를 들어 역 필터를 선택한 경우, 기존처럼 아래 추천 이유가 표시되어야 한다.
+
+```text
+선택한 역과 가깝습니다.
+```
+
+예산, 음식 종류, 식사 목적에 대한 추천 이유도 기존처럼 유지한다.
+
+4-10. 작업 범위 제한
+
+이번 작업에서는 아래 작업을 하지 않는다.
+
+```text
+- 새로운 추천 알고리즘 추가
+- 점수 기반 랭킹 추가
+- 거리 필터 추가
+- 지도 기능 추가
+- 데이터 파일 값 수정
+- 카드 디자인 대규모 변경
+- 불필요한 라이브러리 설치
+```
+
+이번 작업은 단순히 기존 추천 결과를 사용자가 선택한 기준으로 정렬하는 기능이다.
+
+5. 검증 방법
+
+수정 후 아래 명령어를 실행한다.
+
+```bash
+cd frontend
+npm run lint
+npm run build
+```
+
+브라우저에서 아래 동작을 확인한다.
+
+```text
+- 기본 정렬은 가까운 순으로 적용된다.
+- 가까운 순 선택 시 distanceFromStation 값이 작은 식당부터 나온다.
+- 높은 가격순 선택 시 최저 메뉴 가격이 높은 식당부터 나온다.
+- 낮은 가격순 선택 시 최저 메뉴 가격이 낮은 식당부터 나온다.
+- 정렬 기준을 바꿔도 추천 이유가 유지된다.
+- 기존 예산, 음식 종류, 식사 목적, 가까운 역 필터가 깨지지 않는다.
+- 조건 초기화 시 정렬 기준이 가까운 순으로 돌아간다.
+```
+
+6. 완료 후 보고 내용
+
+작업이 끝나면 아래 내용만 간단히 정리해서 알려줘.
+
+```text
+- 수정한 파일 목록
+- 추가한 정렬 옵션
+- 가격 정렬 기준
+- 가까운 순 정렬 기준
+- npm run lint 결과
+- npm run build 결과
+```
+
+## 역 추천 이유에 거리 정보 표시
+1. 작업 지시: 역 추천 이유 문구에 선택 역과 거리 표시
+
+2. 작업 목표
+
+추천 결과 카드의 추천 이유 중 아래 문구를 변경한다.
+
+현재 문구:
+
+```text id="kdg0mn"
+선택한 역과 가깝습니다.
+```
+
+변경할 문구:
+
+```text id="o09i5q"
+{역이름}역과 {거리} m 거리입니다.
+```
+
+예시:
+
+```text id="yzwm7e"
+홍대입구역과 167 m 거리입니다.
+```
+
+이번 작업은 **추천 이유 문구 수정만** 진행한다.
+
+3. 현재 상황
+
+이전 작업에서 가까운 역 필터가 추가되어 있다.
+
+식당 데이터에는 아래 필드가 존재한다.
+
+```json id="jzz0zm"
+"nearStation": "홍대입구",
+"distanceFromStation": 167
+```
+
+그리고 추천 이유에는 현재 아래 문구가 표시되고 있다.
+
+```text id="xsqpmz"
+선택한 역과 가깝습니다.
+```
+
+이 문구를 식당별 데이터 기반 문구로 바꿔야 한다.
+
+4. 수정 대상
+
+아래 파일을 우선 확인하고 수정한다.
+
+```text id="k7wgyd"
+frontend/src/specifications/StationSpecification.js
+frontend/src/services/recommendService.js
+```
+
+만약 파일명이 다르거나 구조가 조금 다르면, 프로젝트 전체에서 아래 문구를 검색해서 해당 위치를 수정한다.
+
+```text id="o4jlx9"
+선택한 역과 가깝습니다.
+```
+
+5. 세부 요구사항
+
+5-1. StationSpecification의 추천 이유를 동적으로 변경
+
+기존에는 `getReason()`이 고정 문자열을 반환하고 있을 가능성이 높다.
+
+예상 기존 코드:
+
+```jsx id="vktk65"
+getReason() {
+  return '선택한 역과 가깝습니다.'
+}
+```
+
+이를 식당 정보를 받아서 문구를 만들 수 있도록 수정한다.
+
+변경 예시:
+
+```jsx id="d9shx9"
+getReason(restaurant) {
+  if (
+    restaurant.nearStation &&
+    restaurant.distanceFromStation !== undefined &&
+    restaurant.distanceFromStation !== null
+  ) {
+    return `${restaurant.nearStation}역과 ${restaurant.distanceFromStation} m 거리입니다.`
+  }
+
+  return '선택한 역과 가깝습니다.'
+}
+```
+
+`distanceFromStation` 값이 없는 경우에는 기존 문구를 fallback으로 사용한다.
+
+5-2. recommendService.js에서 getReason 호출 방식 수정
+
+현재 `recommendService.js`의 `buildReasons` 함수가 아래처럼 되어 있을 수 있다.
+
+```jsx id="8xpw1w"
+function buildReasons(restaurant, activeSpecifications) {
+  return activeSpecifications
+    .filter((specification) => specification.isSatisfiedBy(restaurant))
+    .map((specification) => specification.getReason())
+}
+```
+
+이 경우 `getReason()`에 식당 정보가 전달되지 않아서 역 이름과 거리를 사용할 수 없다.
+
+아래처럼 `restaurant`를 넘기도록 수정한다.
+
+```jsx id="sx45ef"
+function buildReasons(restaurant, activeSpecifications) {
+  return activeSpecifications
+    .filter((specification) => specification.isSatisfiedBy(restaurant))
+    .map((specification) => specification.getReason(restaurant))
+}
+```
+
+기존 BudgetSpecification, CategorySpecification, PurposeSpecification의 `getReason()`은 매개변수를 사용하지 않아도 정상 동작하므로 수정하지 않아도 된다.
+
+5-3. 화면 표시 결과
+
+추천 이유 영역에서 아래처럼 보여야 한다.
+
+변경 전:
+
+```text id="l9f4ze"
+• 선택한 역과 가깝습니다.
+```
+
+변경 후:
+
+```text id="sa4d3e"
+• 홍대입구역과 167 m 거리입니다.
+```
+
+식당마다 `nearStation`, `distanceFromStation` 값에 맞게 다르게 표시되어야 한다.
+
+5-4. 작업 범위 제한
+
+이번 작업에서는 아래 작업을 하지 않는다.
+
+```text id="kevn9v"
+- 결과 카드 레이아웃 변경
+- 태그 UI 변경
+- 정렬 로직 변경
+- 필터 로직 변경
+- 데이터 값 수정
+- distanceFromStation 값 새로 생성
+- 새로운 추천 조건 추가
+- 불필요한 파일 생성
+```
+
+이번 작업은 추천 이유 문구를 동적으로 바꾸는 것만 한다.
+
+6. 검증 방법
+
+수정 후 아래 명령어를 실행한다.
+
+```bash id="bcn03z"
+cd frontend
+npm run lint
+npm run build
+```
+
+브라우저에서 아래 동작을 확인한다.
+
+```text id="sp9yex"
+- 가까운 역 필터를 선택한 뒤 추천 결과를 확인한다.
+- 추천 이유에 "선택한 역과 가깝습니다."가 아니라 "{역이름}역과 {거리} m 거리입니다." 형식으로 표시된다.
+- 식당마다 nearStation과 distanceFromStation 값에 맞게 문구가 달라진다.
+- 예산, 음식 종류, 식사 목적 추천 이유는 기존처럼 정상 표시된다.
+- 추천 결과 카드 UI가 깨지지 않는다.
+```
+
+7. 완료 후 보고 내용
+
+작업이 끝나면 아래 내용만 간단히 정리해서 알려줘.
+
+```text id="nksvag"
+- 수정한 파일 목록
+- 변경한 추천 이유 문구 형식
+- fallback 문구
 - npm run lint 결과
 - npm run build 결과
 ```
