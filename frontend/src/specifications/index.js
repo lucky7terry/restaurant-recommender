@@ -1,6 +1,7 @@
 import { createBudgetSpecification } from './BudgetSpecification'
 import { createCategorySpecification } from './CategorySpecification'
 import { createPurposeSpecification } from './PurposeSpecification'
+import { createStationSpecification } from './StationSpecification'
 
 function isFilterEnabled(value) {
   return (
@@ -28,6 +29,12 @@ const specificationFactories = [
     key: 'purpose',
     create(filters) {
       return createPurposeSpecification(filters.purpose)
+    },
+  },
+  {
+    key: 'stations',
+    create(filters) {
+      return createStationSpecification(filters.stations)
     },
   },
 ]

@@ -10,6 +10,7 @@ function App() {
   const [budget, setBudget] = useState('')
   const [categories, setCategories] = useState([])
   const [purpose, setPurpose] = useState('')
+  const [stations, setStations] = useState([])
   const [submittedFilters, setSubmittedFilters] = useState(null)
   const [recommendations, setRecommendations] = useState([])
 
@@ -25,6 +26,7 @@ function App() {
       budget: budget === '' ? '' : Number(budget),
       categories,
       purpose,
+      stations,
     })
   }
 
@@ -36,10 +38,19 @@ function App() {
     )
   }
 
+  const handleStationToggle = (selectedStation) => {
+    setStations((currentStations) =>
+      currentStations.includes(selectedStation)
+        ? currentStations.filter((station) => station !== selectedStation)
+        : [...currentStations, selectedStation],
+    )
+  }
+
   const handleReset = () => {
     setBudget('')
     setCategories([])
     setPurpose('')
+    setStations([])
     setSubmittedFilters(null)
     setRecommendations([])
   }
@@ -99,9 +110,11 @@ function App() {
               budget={budget}
               categories={categories}
               purpose={purpose}
+              stations={stations}
               onBudgetChange={setBudget}
               onCategoryToggle={handleCategoryToggle}
               onPurposeChange={setPurpose}
+              onStationToggle={handleStationToggle}
               onSubmit={handleSubmit}
               onReset={handleReset}
             />

@@ -23,13 +23,27 @@ const FOOD_CATEGORIES = [
 
 const DINING_PURPOSES = ['혼밥', '데이트', '친구모임', '직장점심']
 
+const STATION_OPTIONS = [
+  '홍대입구',
+  '공덕',
+  '합정',
+  '상수',
+  '마포',
+  '망원',
+  '디지털미디어시티',
+  '대흥',
+  '마포구청',
+]
+
 function SearchForm({
   budget,
   categories,
   purpose,
+  stations,
   onBudgetChange,
   onCategoryToggle,
   onPurposeChange,
+  onStationToggle,
   onSubmit,
   onReset,
 }) {
@@ -74,6 +88,27 @@ function SearchForm({
               onClick={() => onCategoryToggle(foodCategory)}
             >
               {foodCategory}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="field-group">
+        <p className="field-label">
+          NEAR STATION <span>(가까운 역)</span>
+        </p>
+        <div className="category-grid">
+          {STATION_OPTIONS.map((station) => (
+            <button
+              key={station}
+              type="button"
+              className={`category-button${
+                stations.includes(station) ? ' is-selected' : ''
+              }`}
+              aria-pressed={stations.includes(station)}
+              onClick={() => onStationToggle(station)}
+            >
+              {station}
             </button>
           ))}
         </div>

@@ -10,9 +10,13 @@ function formatBudget(budget) {
 
 function buildFilterSummary(filters) {
   const categories = filters.categories ?? []
+  const stations = filters.stations ?? []
   const categorySummary = categories.length > 0 ? categories.join(', ') : ''
+  const stationSummary =
+    stations.length > 0 ? `${stations.join(', ')}역` : ''
   const summaryItems = [
     categorySummary,
+    stationSummary,
     filters.purpose,
     formatBudget(filters.budget),
   ].filter(Boolean)
