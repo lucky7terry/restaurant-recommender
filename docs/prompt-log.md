@@ -350,3 +350,30 @@ restaurants.filter(
    * 기존 예산 필터 기능이 깨지면 안 됩니다.
    * 식사 목적 추가와 함께 검색 로직을 Specification Pattern 기반으로 리팩토링해 주세요.
    * 단순 if문 추가 방식은 사용하지 말아 주세요.
+
+## 식당 데이터에 역 거리 정보 추가
+
+# 작업 지시: 식당 데이터에 역 거리 필드 추가
+
+현재 저장소의 식당 추천 서비스에서 각 식당 데이터에 가까운 역으로부터의 거리 정보를 추가해줘.
+
+## 현재 구조 확인
+
+- 실제 앱에서 사용하는 데이터 파일은 `frontend/src/data/restaurants.json`이다.
+- `frontend/src/repositories/restaurantRepository.js`에서 `../data/restaurants.json`을 import해서 사용하고 있다.
+- 루트의 `data/restaurants.sample.json`도 샘플 데이터로 존재하므로, 데이터 스키마 일관성을 위해 함께 수정한다.
+- 기존 추천 로직은 예산, 카테고리, 목적 중심으로 동작하므로 이번 작업에서는 거리 기반 필터링이나 정렬은 추가하지 않는다.
+
+## 수정 요구사항
+
+### 1. 식당 데이터에 거리 필드 추가
+
+`frontend/src/data/restaurants.json`의 모든 식당 객체에 `distanceFromStation` 필드를 추가해줘.
+
+- 필드명: `distanceFromStation`
+- 타입: number
+- 단위: 미터(m)
+- 값에는 `"m"` 같은 문자열을 붙이지 말 것
+- 값 범위: 0 이상 500 이하의 정수
+- `nearStation` 바로 다음 줄에 추가하는 것을 권장
+- 기존 필드명과 기존 값은 절대 변경하지 말 것
