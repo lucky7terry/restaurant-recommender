@@ -7,10 +7,17 @@ import { recommendRestaurants } from './services/recommendService'
 import './App.css'
 
 const DEFAULT_SORT_OPTION = 'distance'
+const DEFAULT_CATEGORY_DETAILS = {
+  아시안: [],
+  기타: [],
+}
 
 function App() {
   const [budget, setBudget] = useState('')
   const [categories, setCategories] = useState([])
+  const [categoryDetails, setCategoryDetails] = useState(
+    DEFAULT_CATEGORY_DETAILS,
+  )
   const [purpose, setPurpose] = useState('')
   const [stations, setStations] = useState([])
   const [sortOption, setSortOption] = useState(DEFAULT_SORT_OPTION)
@@ -32,6 +39,7 @@ function App() {
     runRecommendation({
       budget: budget === '' ? '' : Number(budget),
       categories,
+      categoryDetails,
       purpose,
       stations,
       sortOption,
@@ -44,6 +52,27 @@ function App() {
         ? currentCategories.filter((category) => category !== selectedCategory)
         : [...currentCategories, selectedCategory],
     )
+
+    if (DEFAULT_CATEGORY_DETAILS[selectedCategory]) {
+      setCategoryDetails((currentDetails) => ({
+        ...currentDetails,
+        [selectedCategory]: [],
+      }))
+    }
+  }
+
+  const handleCategoryDetailToggle = (parentCategory, selectedDetail) => {
+    setCategoryDetails((currentDetails) => {
+      const currentParentDetails = currentDetails[parentCategory] ?? []
+      const nextParentDetails = currentParentDetails.includes(selectedDetail)
+        ? currentParentDetails.filter((detail) => detail !== selectedDetail)
+        : [...currentParentDetails, selectedDetail]
+
+      return {
+        ...currentDetails,
+        [parentCategory]: nextParentDetails,
+      }
+    })
   }
 
   const handleStationToggle = (selectedStation) => {
@@ -57,6 +86,7 @@ function App() {
   const handleReset = () => {
     setBudget('')
     setCategories([])
+    setCategoryDetails(DEFAULT_CATEGORY_DETAILS)
     setPurpose('')
     setStations([])
     setSortOption(DEFAULT_SORT_OPTION)
@@ -84,6 +114,7 @@ function App() {
 
   const handleChangeCategory = () => {
     setCategories([])
+    setCategoryDetails(DEFAULT_CATEGORY_DETAILS)
     setSubmittedFilters(null)
     setRecommendations([])
   }
@@ -131,10 +162,12 @@ function App() {
             <SearchForm
               budget={budget}
               categories={categories}
+              categoryDetails={categoryDetails}
               purpose={purpose}
               stations={stations}
               onBudgetChange={setBudget}
               onCategoryToggle={handleCategoryToggle}
+              onCategoryDetailToggle={handleCategoryDetailToggle}
               onPurposeChange={setPurpose}
               onStationToggle={handleStationToggle}
               onSubmit={handleSubmit}

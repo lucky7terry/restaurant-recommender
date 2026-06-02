@@ -22,7 +22,10 @@ const specificationFactories = [
   {
     key: 'categories',
     create(filters) {
-      return createCategorySpecification(filters.categories)
+      return createCategorySpecification(
+        filters.categories,
+        filters.categoryDetails,
+      )
     },
   },
   {

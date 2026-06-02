@@ -15,7 +15,18 @@ function getLowestMenuPrice(restaurant) {
   return Math.min(...restaurant.menus.map((menu) => menu.price))
 }
 
-function sortRestaurants(restaurants, sortOption = 'distance') {
+function hasSelectedStation(stations) {
+  return Array.isArray(stations) && stations.length > 0
+}
+
+function sortRestaurants(restaurants, sortOption = 'distance', stations = []) {
+  const shouldSortByDistance =
+    sortOption === 'distance' && hasSelectedStation(stations)
+
+  if (sortOption === 'distance' && !shouldSortByDistance) {
+    return restaurants
+  }
+
   return [...restaurants].sort((firstRestaurant, secondRestaurant) => {
     if (sortOption === 'price-desc') {
       return (
@@ -31,10 +42,14 @@ function sortRestaurants(restaurants, sortOption = 'distance') {
       )
     }
 
-    return (
-      getDistanceFromStation(firstRestaurant) -
-      getDistanceFromStation(secondRestaurant)
-    )
+    if (shouldSortByDistance) {
+      return (
+        getDistanceFromStation(firstRestaurant) -
+        getDistanceFromStation(secondRestaurant)
+      )
+    }
+
+    return 0
   })
 }
 
@@ -57,5 +72,9 @@ export function recommendRestaurants(filters = {}) {
       reasons: buildReasons(restaurant, activeSpecifications),
     }))
 
-  return sortRestaurants(recommendations, normalizedFilters.sortOption)
+  return sortRestaurants(
+    recommendations,
+    normalizedFilters.sortOption,
+    normalizedFilters.stations,
+  )
 }

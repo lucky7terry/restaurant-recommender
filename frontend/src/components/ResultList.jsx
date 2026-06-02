@@ -10,8 +10,20 @@ function formatBudget(budget) {
 
 function buildFilterSummary(filters) {
   const categories = filters.categories ?? []
+  const categoryDetails = filters.categoryDetails ?? {}
   const stations = filters.stations ?? []
-  const categorySummary = categories.length > 0 ? categories.join(', ') : ''
+  const categorySummary =
+    categories.length > 0
+      ? categories
+          .map((category) => {
+            const details = categoryDetails[category] ?? []
+
+            return details.length > 0
+              ? `${category}(${details.join(', ')})`
+              : category
+          })
+          .join(', ')
+      : ''
   const stationSummary =
     stations.length > 0 ? `${stations.join(', ')}역` : ''
   const summaryItems = [
@@ -35,6 +47,8 @@ function ResultList({
   onSortOptionChange,
   onEditFilters,
 }) {
+  const hasSelectedStation = (filters.stations ?? []).length > 0
+
   return (
     <section className="result-screen" aria-labelledby="result-title">
       <div className="result-topbar">
@@ -52,7 +66,9 @@ function ResultList({
               value={sortOption}
               onChange={(event) => onSortOptionChange(event.target.value)}
             >
-              <option value="distance">가까운 순</option>
+              <option value="distance">
+                {hasSelectedStation ? '가까운 순' : '기본 추천순'}
+              </option>
               <option value="price-desc">높은 가격순</option>
               <option value="price-asc">낮은 가격순</option>
             </select>

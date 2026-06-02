@@ -5,21 +5,32 @@ const FOOD_CATEGORIES = [
   '양식',
   '분식',
   '패스트푸드',
-  '카페',
-  '아시안',
-  '디저트',
   '치킨',
   '피자',
-  '프랑스',
-  '베트남',
-  '태국',
-  '멕시칸',
-  '비건',
-  '인도',
-  '인도네시아',
-  '스페인',
+  '카페/디저트',
+  '아시안',
   '기타',
 ]
+
+const CATEGORY_LABELS = {
+  아시안: '🌏 아시안',
+  기타: '🌍 기타',
+}
+
+const CATEGORY_DETAIL_OPTIONS = {
+  아시안: [
+    { label: '🇻🇳 베트남', value: '베트남' },
+    { label: '🇹🇭 태국', value: '태국' },
+    { label: '🇮🇳 인도', value: '인도' },
+    { label: '🇮🇩 인도네시아', value: '인도네시아' },
+  ],
+  기타: [
+    { label: '🇫🇷 프랑스', value: '프랑스' },
+    { label: '🇲🇽 멕시칸', value: '멕시칸' },
+    { label: '🇪🇸 스페인', value: '스페인' },
+    { label: '🌱 비건', value: '비건' },
+  ],
+}
 
 const DINING_PURPOSES = ['혼밥', '데이트', '친구모임', '직장점심']
 
@@ -35,13 +46,27 @@ const STATION_OPTIONS = [
   '마포구청',
 ]
 
+function formatBudgetValue(value) {
+  if (value === '' || value === undefined || value === null) {
+    return ''
+  }
+
+  return Number(value).toLocaleString('ko-KR')
+}
+
+function normalizeBudgetInput(value) {
+  return value.replace(/[^\d]/g, '')
+}
+
 function SearchForm({
   budget,
   categories,
+  categoryDetails,
   purpose,
   stations,
   onBudgetChange,
   onCategoryToggle,
+  onCategoryDetailToggle,
   onPurposeChange,
   onStationToggle,
   onSubmit,
@@ -61,12 +86,13 @@ function SearchForm({
         <div className="budget-control">
           <input
             id="budget"
-            type="number"
-            min="0"
+            type="text"
             inputMode="numeric"
-            placeholder="₩ 최대 예산을 입력하세요. (예: 15000)"
-            value={budget}
-            onChange={(event) => onBudgetChange(event.target.value)}
+            placeholder="₩ 최대 예산을 입력하세요. (예: 15,000)"
+            value={formatBudgetValue(budget)}
+            onChange={(event) =>
+              onBudgetChange(normalizeBudgetInput(event.target.value))
+            }
           />
           <span className="currency-badge">KRW</span>
         </div>
@@ -77,20 +103,62 @@ function SearchForm({
           FOOD CATEGORY <span>(음식 종류)</span>
         </p>
         <div className="category-grid">
-          {FOOD_CATEGORIES.map((foodCategory) => (
-            <button
-              key={foodCategory}
-              type="button"
-              className={`category-button${
-                categories.includes(foodCategory) ? ' is-selected' : ''
-              }`}
-              aria-pressed={categories.includes(foodCategory)}
-              onClick={() => onCategoryToggle(foodCategory)}
-            >
-              {foodCategory}
-            </button>
-          ))}
+          {FOOD_CATEGORIES.map((foodCategory) => {
+            const isSelected = categories.includes(foodCategory)
+            const detailCount = categoryDetails[foodCategory]?.length ?? 0
+            const label = CATEGORY_LABELS[foodCategory] ?? foodCategory
+
+            return (
+              <button
+                key={foodCategory}
+                type="button"
+                className={`category-button${
+                  isSelected ? ' is-selected' : ''
+                }`}
+                aria-pressed={isSelected}
+                onClick={() => onCategoryToggle(foodCategory)}
+              >
+                {label}
+                {detailCount > 0 ? ` (${detailCount})` : ''}
+              </button>
+            )
+          })}
         </div>
+        {FOOD_CATEGORIES.map((foodCategory) => {
+          const detailOptions = CATEGORY_DETAIL_OPTIONS[foodCategory]
+
+          if (!detailOptions || !categories.includes(foodCategory)) {
+            return null
+          }
+
+          return (
+            <div className="category-detail-panel" key={`${foodCategory}-details`}>
+              {detailOptions.map((option) => {
+                const isChecked = categoryDetails[foodCategory]?.includes(
+                  option.value,
+                )
+
+                return (
+                  <label
+                    className={`category-detail-option${
+                      isChecked ? ' is-selected' : ''
+                    }`}
+                    key={option.value}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() =>
+                        onCategoryDetailToggle(foodCategory, option.value)
+                      }
+                    />
+                    <span>{option.label}</span>
+                  </label>
+                )
+              })}
+            </div>
+          )
+        })}
       </div>
 
       <div className="field-group">

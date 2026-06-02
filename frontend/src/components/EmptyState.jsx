@@ -8,8 +8,20 @@ function formatBudget(budget) {
 
 function buildFilterSummary(filters) {
   const categories = filters.categories ?? []
+  const categoryDetails = filters.categoryDetails ?? {}
   const stations = filters.stations ?? []
-  const categorySummary = categories.length > 0 ? categories.join(', ') : ''
+  const categorySummary =
+    categories.length > 0
+      ? categories
+          .map((category) => {
+            const details = categoryDetails[category] ?? []
+
+            return details.length > 0
+              ? `${category}(${details.join(', ')})`
+              : category
+          })
+          .join(', ')
+      : ''
   const stationSummary =
     stations.length > 0 ? `${stations.join(', ')}역` : ''
   const summaryItems = [

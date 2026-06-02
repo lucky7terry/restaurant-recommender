@@ -358,7 +358,7 @@
     "nearStation": "망원",
     "distanceFromStation": 214,
     "address": "서울특별시 마포구 망원동 ...",
-    "category": "카페",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "오리지널 컵 티라미수",
@@ -860,7 +860,7 @@
     "nearStation": "상수",
     "distanceFromStation": 112,
     "address": "서울특별시 마포구 상수동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "수제 젤라또 싱글 컵",
@@ -961,7 +961,7 @@
     "nearStation": "망원",
     "distanceFromStation": 260,
     "address": "서울특별시 마포구 망원동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "프랑스 발효버터 소금빵",
@@ -1113,7 +1113,7 @@
     "nearStation": "홍대입구",
     "distanceFromStation": 482,
     "address": "서울특별시 마포구 서교동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "오리지널 브라운슈가 밀크티",
@@ -1240,7 +1240,7 @@
     "nearStation": "합정",
     "distanceFromStation": 246,
     "address": "서울특별시 마포구 합정동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "리얼 마다가스카르 바닐라 뚱카롱",
@@ -1315,7 +1315,7 @@
     "nearStation": "홍대입구",
     "distanceFromStation": 357,
     "address": "서울특별시 마포구 연남동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "리조 (이천쌀) 젤라또",
@@ -1443,7 +1443,7 @@
     "nearStation": "공덕",
     "distanceFromStation": 121,
     "address": "서울특별시 마포구 공덕동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "AOP 버터 오리지널 크루아상",
@@ -1545,7 +1545,7 @@
     "nearStation": "홍대입구",
     "distanceFromStation": 269,
     "address": "서울특별시 마포구 연남동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "오리지널 수플레 팬케이크",
@@ -1620,7 +1620,7 @@
     "nearStation": "망원",
     "distanceFromStation": 380,
     "address": "서울특별시 마포구 망원동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "메이플 시럽 크로플",
@@ -1694,7 +1694,7 @@
     "nearStation": "합정",
     "distanceFromStation": 491,
     "address": "서울특별시 마포구 합정동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "샤인머스캣 생과일 타르트",
@@ -1744,7 +1744,7 @@
     "nearStation": "마포",
     "distanceFromStation": 144,
     "address": "서울특별시 마포구 도화동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "순수 100% 우유 눈꽃빙수",
@@ -1920,7 +1920,7 @@
     "nearStation": "마포",
     "distanceFromStation": 403,
     "address": "서울특별시 마포구 도화동 ...",
-    "category": "카페",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "아이스 아메리카노",
@@ -1970,7 +1970,7 @@
     "nearStation": "홍대입구",
     "distanceFromStation": 477,
     "address": "서울특별시 마포구 연남동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "바닐라 빈 까눌레",
@@ -2319,7 +2319,7 @@
     "nearStation": "망원",
     "distanceFromStation": 153,
     "address": "서울특별시 마포구 망원동 ...",
-    "category": "카페",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "핸드드립 스페셜티",
@@ -2473,7 +2473,7 @@
     "nearStation": "망원",
     "distanceFromStation": 375,
     "address": "서울특별시 마포구 망원동 ...",
-    "category": "디저트",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "리얼 초코 브라우니",
@@ -2498,7 +2498,7 @@
     "nearStation": "마포",
     "distanceFromStation": 412,
     "address": "서울특별시 마포구 도화동 ...",
-    "category": "카페",
+    "category": "카페/디저트",
     "menus": [
       {
         "name": "시그니처 크림 라떼",
