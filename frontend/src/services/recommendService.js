@@ -24,7 +24,7 @@ function sortRestaurants(restaurants, sortOption = 'distance', stations = []) {
     sortOption === 'distance' && hasSelectedStation(stations)
 
   if (sortOption === 'distance' && !shouldSortByDistance) {
-    return restaurants
+    return [...restaurants]
   }
 
   return [...restaurants].sort((firstRestaurant, secondRestaurant) => {
@@ -54,7 +54,10 @@ function sortRestaurants(restaurants, sortOption = 'distance', stations = []) {
 }
 
 export function recommendRestaurants(filters = {}) {
-  const categories = filters.categories ?? filters.category
+  const filterCategories = filters.categories ?? filters.category
+  const categories = Array.isArray(filterCategories)
+    ? filterCategories
+    : [filterCategories].filter(Boolean)
   const normalizedFilters = {
     ...filters,
     categories,

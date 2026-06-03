@@ -1,7 +1,4 @@
-const CATEGORY_GROUPS = {
-  아시안: ['베트남', '태국', '인도', '인도네시아'],
-  기타: ['프랑스', '멕시칸', '비건', '스페인'],
-}
+import { CATEGORY_GROUPS } from '../constants/categoryOptions'
 
 export function buildSearchCategories(categories = [], categoryDetails = {}) {
   return categories.flatMap((category) => {

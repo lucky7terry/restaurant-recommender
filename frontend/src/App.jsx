@@ -3,14 +3,11 @@ import EmptyState from './components/EmptyState'
 import Header from './components/Header'
 import ResultList from './components/ResultList'
 import SearchForm from './components/SearchForm'
+import { DEFAULT_CATEGORY_DETAILS } from './constants/categoryOptions'
 import { recommendRestaurants } from './services/recommendService'
 import './App.css'
 
 const DEFAULT_SORT_OPTION = 'distance'
-const DEFAULT_CATEGORY_DETAILS = {
-  아시안: [],
-  기타: [],
-}
 
 function App() {
   const [budget, setBudget] = useState('')
@@ -53,7 +50,7 @@ function App() {
         : [...currentCategories, selectedCategory],
     )
 
-    if (DEFAULT_CATEGORY_DETAILS[selectedCategory]) {
+    if (selectedCategory in DEFAULT_CATEGORY_DETAILS) {
       setCategoryDetails((currentDetails) => ({
         ...currentDetails,
         [selectedCategory]: [],

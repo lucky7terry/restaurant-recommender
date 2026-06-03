@@ -21,7 +21,11 @@ function EmptyState({
         <p>예산을 높이거나 카테고리를 변경해 보세요.</p>
 
         <div className="empty-actions">
-          <button className="primary-action" type="button" onClick={onIncreaseBudget}>
+          <button
+            className="primary-action"
+            type="button"
+            onClick={onIncreaseBudget}
+          >
             예산 높이기
           </button>
           <button
@@ -31,7 +35,11 @@ function EmptyState({
           >
             카테고리 변경
           </button>
-          <button className="reset-action" type="button" onClick={onResetFilters}>
+          <button
+            className="reset-action"
+            type="button"
+            onClick={onResetFilters}
+          >
             조건 다시 설정하기
           </button>
         </div>

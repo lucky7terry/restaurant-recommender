@@ -1,36 +1,8 @@
-const FOOD_CATEGORIES = [
-  '한식',
-  '중식',
-  '일식',
-  '양식',
-  '분식',
-  '패스트푸드',
-  '치킨',
-  '피자',
-  '카페/디저트',
-  '아시안',
-  '기타',
-]
-
-const CATEGORY_LABELS = {
-  아시안: '🌏 아시안',
-  기타: '🌍 기타',
-}
-
-const CATEGORY_DETAIL_OPTIONS = {
-  아시안: [
-    { label: '🇻🇳 베트남', value: '베트남' },
-    { label: '🇹🇭 태국', value: '태국' },
-    { label: '🇮🇳 인도', value: '인도' },
-    { label: '🇮🇩 인도네시아', value: '인도네시아' },
-  ],
-  기타: [
-    { label: '🇫🇷 프랑스', value: '프랑스' },
-    { label: '🇲🇽 멕시칸', value: '멕시칸' },
-    { label: '🇪🇸 스페인', value: '스페인' },
-    { label: '🌱 비건', value: '비건' },
-  ],
-}
+import {
+  CATEGORY_DETAIL_OPTIONS,
+  CATEGORY_LABELS,
+  FOOD_CATEGORIES,
+} from '../constants/categoryOptions'
 
 const DINING_PURPOSES = ['혼밥', '데이트', '친구모임', '직장점심']
 

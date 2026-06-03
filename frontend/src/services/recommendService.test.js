@@ -45,6 +45,66 @@ describe('recommendRestaurants', () => {
       .toBe(true)
   })
 
+  it('accepts a single category string for backward compatibility', () => {
+    const category = '한식'
+    const results = recommendRestaurants({ category })
+    const expectedRestaurants = restaurants.filter(
+      (restaurant) => restaurant.category === category,
+    )
+
+    isSameResultSet(results, expectedRestaurants)
+  })
+
+  it('includes every Asian subcategory when only the Asian parent is selected', () => {
+    const categories = ['아시안']
+    const asianCategories = ['아시안', '베트남', '태국', '인도', '인도네시아']
+    const results = recommendRestaurants({ categories })
+    const expectedRestaurants = restaurants.filter((restaurant) =>
+      asianCategories.includes(restaurant.category),
+    )
+
+    isSameResultSet(results, expectedRestaurants)
+    expect(
+      results.every((restaurant) =>
+        asianCategories.includes(restaurant.category),
+      ),
+    ).toBe(true)
+  })
+
+  it('limits Asian recommendations to selected country details', () => {
+    const results = recommendRestaurants({
+      categories: ['아시안'],
+      categoryDetails: { 아시안: ['베트남', '태국'] },
+    })
+    const expectedRestaurants = restaurants.filter((restaurant) =>
+      ['베트남', '태국'].includes(restaurant.category),
+    )
+
+    isSameResultSet(results, expectedRestaurants)
+    expect(
+      results.every((restaurant) =>
+        ['베트남', '태국'].includes(restaurant.category),
+      ),
+    ).toBe(true)
+  })
+
+  it('limits other recommendations to selected details', () => {
+    const results = recommendRestaurants({
+      categories: ['기타'],
+      categoryDetails: { 기타: ['프랑스', '스페인'] },
+    })
+    const expectedRestaurants = restaurants.filter((restaurant) =>
+      ['프랑스', '스페인'].includes(restaurant.category),
+    )
+
+    isSameResultSet(results, expectedRestaurants)
+    expect(
+      results.every((restaurant) =>
+        ['프랑스', '스페인'].includes(restaurant.category),
+      ),
+    ).toBe(true)
+  })
+
   it('returns only restaurants matching the selected dining purpose', () => {
     const purpose = '혼밥'
     const results = recommendRestaurants({ purpose })
@@ -76,6 +136,12 @@ describe('recommendRestaurants', () => {
 
     expect(results).toHaveLength(restaurants.length)
     expect(isAscending(lowestPrices)).toBe(true)
+  })
+
+  it('keeps the base recommendation order for distance sort without stations', () => {
+    const results = recommendRestaurants({ sortOption: 'distance' })
+
+    isSameResultSet(results, restaurants)
   })
 
   it('sorts selected station results by distance from station', () => {
