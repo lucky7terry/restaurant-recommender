@@ -1364,3 +1364,23 @@ npm run build
 주의사항:
 - 코드는 수정하지 마세요.
 - 현재 구현된 기능과 문서가 일치하도록 정리하는 것이 목적입니다.
+
+## 조건 요약 생성 로직 중복 제거
+
+현재 `ResultList.jsx`와 `EmptyState.jsx`에 `formatBudget`, `buildFilterSummary` 로직이 중복되어 있습니다.
+유지보수성을 높이기 위해 공통 유틸 파일로 분리해 주세요.
+
+수정 목표:
+- `frontend/src/utils/filterSummary.js` 파일을 추가해 주세요.
+- `formatBudget`
+- `buildFilterSummary`
+두 함수를 해당 파일로 이동해 주세요.
+- `ResultList.jsx`와 `EmptyState.jsx`에서는 공통 함수를 import해서 사용하도록 수정해 주세요.
+
+주의사항:
+- 화면 출력 문구는 기존과 동일해야 합니다.
+- 추천 로직은 수정하지 마세요.
+- UI 스타일은 수정하지 마세요.
+- `npm run lint`
+- `npm run build`
+결과를 확인해 주세요.
