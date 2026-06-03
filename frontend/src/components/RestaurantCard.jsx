@@ -2,6 +2,18 @@ function formatPrice(price) {
   return `${price.toLocaleString('ko-KR')}원`
 }
 
+function formatMenuPriceRange(menus) {
+  const prices = menus.map((menu) => menu.price)
+  const lowestPrice = Math.min(...prices)
+  const highestPrice = Math.max(...prices)
+
+  if (lowestPrice === highestPrice) {
+    return formatPrice(lowestPrice)
+  }
+
+  return `${formatPrice(lowestPrice)} ~ ${formatPrice(highestPrice)}`
+}
+
 function RestaurantCard({ restaurant, rank }) {
   return (
     <article className="restaurant-card">
@@ -19,7 +31,7 @@ function RestaurantCard({ restaurant, rank }) {
         </div>
 
         <div className="restaurant-meta" aria-label="식당 정보">
-          <span>{restaurant.priceRange}</span>
+          <span>{formatMenuPriceRange(restaurant.menus)}</span>
           <span>
             {restaurant.district} {restaurant.dong}
           </span>
