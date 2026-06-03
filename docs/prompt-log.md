@@ -1384,3 +1384,229 @@ npm run build
 - `npm run lint`
 - `npm run build`
 결과를 확인해 주세요.
+
+## 제출 전 최종 서비스 개선
+## 카테고리 관리 구조 통합 및 추천 로직 안정성 개선
+
+현재 FoodPick 프로젝트에서 카테고리 관련 설정이 여러 파일에 분산되어 있으며, UI에서 사용하는 카테고리 정의와 추천 로직에서 사용하는 카테고리 그룹 규칙이 서로 다른 형태로 관리되고 있습니다.
+
+이로 인해 새로운 카테고리 추가 또는 수정 시 여러 파일을 동시에 수정해야 하며, UI와 추천 결과가 서로 불일치할 가능성이 있습니다.
+
+또한 추천 서비스의 일부 입력값 처리와 정렬 로직에 안정성 문제가 존재할 수 있으므로 함께 개선해 주세요.
+
+
+# 작업 목표
+1. 카테고리 정의를 단일 소스로 통합
+2. UI와 추천 로직이 동일한 카테고리 구조를 사용하도록 개선
+3. 정렬 로직 안정성 개선
+4. 단위 테스트 보강
+
+
+# 1. 카테고리 설정 중앙화
+
+새 파일 생성 또는 프로젝트 구조에 맞는 적절한 위치
+
+해당 파일에서 관리할 항목:
+
+```js
+FOOD_CATEGORIES
+CATEGORY_LABELS
+CATEGORY_DETAIL_OPTIONS
+CATEGORY_GROUPS
+DEFAULT_CATEGORY_DETAILS
+```
+---
+
+요구사항:
+현재 UI 컴포넌트와 추천 로직에서 카테고리 정의가 중복 관리되고 있다면 모두 제거한다.
+
+향후 카테고리 추가 또는 수정 시 위 파일만 변경하면 되도록 한다.
+
+
+# 2. 추천 로직 입력값 호환성 개선
+
+수정 파일
+
+```text
+frontend/src/services/recommendService.js
+```
+
+
+현재 카테고리는 배열 기반으로 동작하지만 과거 코드 또는 테스트에서 아래와 같은 호출이 남아 있을 수 있다.
+
+```js
+{
+  category: '한식'
+}
+```
+
+또는
+
+```js
+{
+  category: '아시안'
+}
+```
+
+---
+
+요구사항:
+recommendService 내부에서 category 값을 정규화한다.
+
+예시
+
+```js
+const categories = Array.isArray(filters.category)
+  ? filters.category
+  : filters.category
+    ? [filters.category]
+    : []
+```
+
+또는 현재 구조에 맞게 구현한다.
+
+이전 버전 호출 방식이 남아 있더라도 추천 서비스가 깨지지 않도록 한다.
+
+
+# 3. distance 정렬 안정성 개선
+
+현재 정렬 옵션이
+```text
+distance
+price-asc
+price-desc
+```
+로 구성되어 있다.
+
+역을 선택하지 않았는데
+
+```js
+sortOption === 'distance'
+```
+
+인 경우 불필요한 거리 정렬이 시도될 수 있다.
+
+---
+
+요구사항:
+
+1. 역 필터가 비어 있으면 distance 정렬을 수행하지 않는다.
+
+  예시
+
+  ```js
+  stations.length === 0
+  ```
+
+  인 경우
+
+  기존 추천 순서를 유지한다.
+
+
+2. 정렬을 건너뛸 때 원본 배열을 그대로 반환하지 말고 새로운 배열을 반환한다.
+
+  예시
+
+  ```js
+  return [...restaurants]
+  ```
+
+  배열 참조 공유로 인한 부작용을 방지한다.
+
+---
+
+# 4. 단위 테스트 보강
+
+수정 파일
+
+```text
+frontend/src/services/recommendService.test.js
+```
+---
+
+요구사항: 아래 테스트를 추가한다.
+
+1. 단일 category 문자열 호환
+
+  ```js
+  {
+   category: '한식'
+  }
+  ```
+
+  형태도 정상 동작하는지 검증
+
+
+2. 아시안 상위 카테고리 선택
+
+  ```js
+  categories: ['아시안']
+  ```
+
+  선택 시
+
+  ```text
+  베트남
+  태국
+  인도
+  인도네시아
+  ```
+
+  전체를 포함하는지 검증
+
+
+3. 세부 선택
+
+  ```js
+  categories: ['베트남']
+  ```
+
+  선택 시 베트남 식당만 추천되는지 검증
+
+
+  ```js
+  categories: ['프랑스']
+  ```
+
+  선택 시 해당 카테고리만 추천되는지 검증
+
+
+4. 역 미선택 상태 distance 정렬
+
+```js
+stations: []
+sortOption: 'distance'
+```
+
+인 경우
+
+거리 정렬을 수행하지 않고 기존 추천 순서가 유지되는지 검증
+
+---
+
+## 검증
+
+작업 후 아래 명령을 실행한다.
+
+```bash
+npm run lint
+npm run build
+npm run test
+```
+
+---
+
+## 완료 후 보고
+
+아래 내용만 간단히 정리한다.
+
+```text
+- 생성한 공통 카테고리 파일
+- 제거된 중복 카테고리 정의
+- recommendService 호환성 개선 내용
+- distance 정렬 처리 변경 사항
+- 추가된 테스트 목록
+- lint 결과
+- build 결과
+- test 결과
+```
