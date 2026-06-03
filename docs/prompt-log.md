@@ -1304,3 +1304,32 @@ npm run build
 - `npm run lint`
 - `npm run build`
 결과를 확인해 주세요.
+
+## 추천 로직 단위 테스트 추가
+
+현재 프로젝트에는 `npm run test` 스크립트가 없습니다.
+요구사항 문서에 추천 로직 함수 단위 테스트가 포함되어 있으므로,
+추천 로직에 대한 간단한 단위 테스트를 추가해 주세요.
+
+작업 목표:
+- Vitest를 devDependencies에 추가
+- `package.json`에 `"test": "vitest run"` 스크립트 추가
+- `frontend/src/services/recommendService.test.js` 파일 추가
+- `recommendRestaurants` 함수의 핵심 동작을 테스트
+
+테스트 케이스:
+1. 예산을 입력하면 해당 예산 이하 메뉴가 하나 이상 있는 식당만 반환된다.
+2. 카테고리를 선택하면 선택한 카테고리에 해당하는 식당만 반환된다.
+3. 식사 목적을 선택하면 해당 purposes 값을 포함한 식당만 반환된다.
+4. 가까운 역을 선택하면 해당 nearStation 식당만 반환된다.
+5. 낮은 가격순 정렬 시 최저 메뉴 가격 기준 오름차순으로 정렬된다.
+6. 가까운 역을 선택하고 distance 정렬 시 distanceFromStation 오름차순으로 정렬된다.
+
+주의사항:
+- UI 컴포넌트 테스트는 하지 않아도 됩니다.
+- 추천 로직 함수 단위 테스트만 추가해 주세요.
+- 기존 추천 로직은 테스트가 깨지는 경우에만 최소 수정해 주세요.
+- `npm run lint`
+- `npm run build`
+- `npm run test`
+결과를 확인해 주세요.
